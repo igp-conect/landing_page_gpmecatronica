@@ -3,7 +3,8 @@ import "../../public/assets/vendor/bootstrap/css/bootstrap.min.css";
 import "../../public/assets/vendor/bootstrap-icons/bootstrap-icons.css";
 import "../../public/assets/vendor/glightbox/css/glightbox.min.css";
 import "../../public/assets/vendor/swiper/swiper-bundle.min.css";
-import { PageHeader } from "@/components/Header";
+import { PageHeader } from "@/app/Header";
+import { Hero } from "@/app/Hero";
 
 // import "../../public/assets/vendor/aos/aos.css";
 // TODO: Implementar a biblioteca AOS para funcionar com o React.
@@ -20,110 +21,7 @@ export default function Home() {
   ======================================================== */}
       <PageHeader />
       <main className="main">
-        {/* Hero Section */}
-        <section id="hero" className="hero section accent-background">
-          <div
-            className="container position-relative"
-            data-aos="fade-up"
-            data-aos-delay={100}
-          >
-            <div className="row gy-5 justify-content-between">
-              <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                <h2>
-                  <span>Welcome to </span>
-                  <span className="accent">Impact</span>
-                </h2>
-                <p>
-                  Sed autem laudantium dolores. Voluptatem itaque ea consequatur
-                  eveniet. Eum quas beatae cumque eum quaerat.
-                </p>
-                <div className="d-flex">
-                  <a href="#about" className="btn-get-started">
-                    Get Started
-                  </a>
-                  <a
-                    href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
-                    className="glightbox btn-watch-video d-flex align-items-center"
-                  >
-                    <i className="bi bi-play-circle" />
-                    <span>Watch Video</span>
-                  </a>
-                </div>
-              </div>
-              <div className="col-lg-5 order-1 order-lg-2">
-                <img
-                  src="assets/img/hero-img.svg"
-                  className="img-fluid"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div
-            className="icon-boxes position-relative"
-            data-aos="fade-up"
-            data-aos-delay={200}
-          >
-            <div className="container position-relative">
-              <div className="row gy-4 mt-5">
-                <div className="col-xl-3 col-md-6">
-                  <div className="icon-box">
-                    <div className="icon">
-                      <i className="bi bi-easel" />
-                    </div>
-                    <h4 className="title">
-                      <a href="" className="stretched-link">
-                        Lorem Ipsum
-                      </a>
-                    </h4>
-                  </div>
-                </div>
-                {/*End Icon Box */}
-                <div className="col-xl-3 col-md-6">
-                  <div className="icon-box">
-                    <div className="icon">
-                      <i className="bi bi-gem" />
-                    </div>
-                    <h4 className="title">
-                      <a href="" className="stretched-link">
-                        Sed ut perspiciatis
-                      </a>
-                    </h4>
-                  </div>
-                </div>
-                {/*End Icon Box */}
-                <div className="col-xl-3 col-md-6">
-                  <div className="icon-box">
-                    <div className="icon">
-                      <i className="bi bi-geo-alt" />
-                    </div>
-                    <h4 className="title">
-                      <a href="" className="stretched-link">
-                        Magni Dolores
-                      </a>
-                    </h4>
-                  </div>
-                </div>
-                {/*End Icon Box */}
-                <div className="col-xl-3 col-md-6">
-                  <div className="icon-box">
-                    <div className="icon">
-                      <i className="bi bi-command" />
-                    </div>
-                    <h4 className="title">
-                      <a href="" className="stretched-link">
-                        Nemo Enim
-                      </a>
-                    </h4>
-                  </div>
-                </div>
-                {/*End Icon Box */}
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* /Hero Section */}
-        {/* About Section */}
+        <Hero />
         <section id="about" className="about section">
           {/* Section Title */}
           <div className="container section-title" data-aos="fade-up">
