@@ -23,7 +23,7 @@ const NavMenu = () => (
   <nav id="navmenu" className="navmenu">
     <ul>
       {["Home", "About", "Services", "Portfolio", "Team"].map((sectionName) => (
-        <NavItem navItemName={sectionName} />
+        <NavItem key={sectionName.toLowerCase()} navItemName={sectionName} />
       ))}
       <HeaderDropdown dropdownItems={["Deep down"]} />
       <NavItem navItemName="Contact" />
