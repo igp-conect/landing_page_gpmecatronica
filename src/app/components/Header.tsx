@@ -5,7 +5,7 @@ const HeaderDropdown = ({ dropdownItems }: { dropdownItems: string[] }) => (
     </a>
     <ul>
       {dropdownItems.map((dropdownItem) => (
-        <li>
+        <li key={dropdownItem}>
           <a href="#">{dropdownItem}</a>
         </li>
       ))}
@@ -38,7 +38,11 @@ export const PageHeader = () => (
       <div className="container d-flex justify-content-center justify-content-md-between">
         <div className="social-links d-none d-md-flex align-items-center">
           {["facebook", "instagram"].map((socialMediaIconName) => (
-            <a href="#" className={socialMediaIconName}>
+            <a
+              key={socialMediaIconName}
+              href="#"
+              className={socialMediaIconName}
+            >
               <i className={`bi bi-${socialMediaIconName}`} />
             </a>
           ))}
