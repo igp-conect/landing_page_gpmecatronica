@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { PortfolioItemView } from "./PortfolioItemView"; // adjust path as needed
 import { portfolioItems } from ".";
-import { PortfolioItemView } from "./PortfolioItemView";
+import { AnimatePresence, motion } from "framer-motion";
 
 const filters = [
   { label: "All", value: "*" },
@@ -53,15 +54,26 @@ export const Portfolio = () => {
           data-aos="fade-up"
           data-aos-delay={200}
         >
-          {filteredItems.map((item, index) => (
-            <PortfolioItemView
-              key={index}
-              name={item.name}
-              description={item.description}
-              category={item.category}
-              image={{ src: item.image.src, alt: item.image.alt }}
-            />
-          ))}
+          <AnimatePresence>
+            {filteredItems.map((item, index) => (
+              <motion.div
+                className="col-lg-4 col-md-6"
+                key={item.name + index}
+                layout
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.3 }}
+              >
+                <PortfolioItemView
+                  name={item.name}
+                  description={item.description}
+                  category={item.category}
+                  image={{ src: item.image.src, alt: item.image.alt }}
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@ export const PortfolioItemView = ({
   description,
   image,
 }: PortfolioItem) => (
-  <div className="col-lg-4 col-md-6 portfolio-item">
+  <div className="portfolio-item">
     <div className="portfolio-content h-100">
       <a
         href={image.src}
