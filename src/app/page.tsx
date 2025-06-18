@@ -10,6 +10,7 @@ import { PageHeader } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
 import { Portfolio } from "./components/Portfolio/Portfolio";
+import { Stats } from "./components/Stats";
 
 // import "../../public/assets/vendor/aos/aos.css";
 // TODO: Implementar a biblioteca AOS e as demais bibliotecas do template para funcionar com o React.
@@ -28,97 +29,7 @@ export default function Home() {
       <main className="main">
         <Hero />
         <About />
-        {/* Stats Section */}
-        <section id="stats" className="stats section">
-          <div className="container" data-aos="fade-up" data-aos-delay={100}>
-            <div className="row gy-4 align-items-center">
-              <div className="col-lg-5">
-                <img
-                  src="assets/img/stats-img.svg"
-                  alt=""
-                  className="img-fluid"
-                />
-              </div>
-              <div className="col-lg-7">
-                <div className="row gy-4">
-                  <div className="col-lg-6">
-                    <div className="stats-item d-flex">
-                      <i className="bi bi-emoji-smile flex-shrink-0" />
-                      <div>
-                        <span
-                          data-purecounter-start={0}
-                          data-purecounter-end={232}
-                          data-purecounter-duration={1}
-                          className="purecounter"
-                        />
-                        <p>
-                          <strong>Happy Clients</strong>{" "}
-                          <span>consequuntur quae</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  {/* End Stats Item */}
-                  <div className="col-lg-6">
-                    <div className="stats-item d-flex">
-                      <i className="bi bi-journal-richtext flex-shrink-0" />
-                      <div>
-                        <span
-                          data-purecounter-start={0}
-                          data-purecounter-end={521}
-                          data-purecounter-duration={1}
-                          className="purecounter"
-                        />
-                        <p>
-                          <strong>Projects</strong>{" "}
-                          <span>adipisci atque cum quia aut</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  {/* End Stats Item */}
-                  <div className="col-lg-6">
-                    <div className="stats-item d-flex">
-                      <i className="bi bi-headset flex-shrink-0" />
-                      <div>
-                        <span
-                          data-purecounter-start={0}
-                          data-purecounter-end={1453}
-                          data-purecounter-duration={1}
-                          className="purecounter"
-                        />
-                        <p>
-                          <strong>Hours Of Support</strong>{" "}
-                          <span>aut commodi quaerat</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  {/* End Stats Item */}
-                  <div className="col-lg-6">
-                    <div className="stats-item d-flex">
-                      <i className="bi bi-people flex-shrink-0" />
-                      <div>
-                        <span
-                          data-purecounter-start={0}
-                          data-purecounter-end={32}
-                          data-purecounter-duration={1}
-                          className="purecounter"
-                        />
-                        <p>
-                          <strong>Hard Workers</strong>{" "}
-                          <span>rerum asperiores dolor</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  {/* End Stats Item */}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* /Stats Section */}
+        <Stats />
         {/* Call To Action Section */}
         <section
           id="call-to-action"
