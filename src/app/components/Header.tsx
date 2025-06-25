@@ -1,7 +1,14 @@
-const HeaderDropdown = ({ dropdownItems }: { dropdownItems: string[] }) => (
+const HeaderDropdown = ({
+  dropdownTitle,
+  dropdownItems,
+}: {
+  dropdownTitle: string;
+  dropdownItems: string[];
+}) => (
   <li className="dropdown">
     <a href="#">
-      <span>Dropdown</span> <i className="bi bi-chevron-down toggle-dropdown" />
+      <span>{dropdownTitle}</span>{" "}
+      <i className="bi bi-chevron-down toggle-dropdown" />
     </a>
     <ul>
       {dropdownItems.map((dropdownItem) => (
@@ -29,14 +36,16 @@ const NavItem = ({
 const NavMenu = () => (
   <nav id="navmenu" className="navmenu">
     <ul>
-      {["Home", "About", "Services", "Portfolio", "Team"].map((sectionName) => (
-        <NavItem
-          key={sectionName.toLowerCase()}
-          href={`#${sectionName.toLowerCase()}`}
-          navItemName={sectionName}
-        />
-      ))}
-      <HeaderDropdown dropdownItems={["Deep down"]} />
+      {["Início", "Sobre", "Serviços", "Portfólio", "Equipe"].map(
+        (sectionName) => (
+          <NavItem
+            key={sectionName.toLowerCase()}
+            href={`#${sectionName.toLowerCase()}`}
+            navItemName={sectionName}
+          />
+        ),
+      )}
+      <HeaderDropdown dropdownTitle="Mais" dropdownItems={["Mais ainda"]} />
       <NavItem navItemName="Contact" href={"#contact"} />
     </ul>
     <i className="mobile-nav-toggle d-xl-none bi bi-list" />
