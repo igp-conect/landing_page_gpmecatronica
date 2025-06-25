@@ -2,10 +2,9 @@ export function Team() {
   return (
     <section id="team" className="team section">
       <div className="container section-title" data-aos="fade-up">
-        <h2>Our Team</h2>
+        <h2>Nossa Equipe</h2>
         <p>
-          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-          consectetur velit
+          Conheça os membros do GPMecatrônica que estão transformando ideias em soluções inovadoras nas áreas de robótica e tecnologia.
         </p>
       </div>
       <div className="container">
