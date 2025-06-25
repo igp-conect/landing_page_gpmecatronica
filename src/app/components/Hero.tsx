@@ -28,23 +28,24 @@ export const Hero = () => (
       <div className="row gy-5 justify-content-between">
         <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
           <h2>
-            <span>Welcome to </span>
-            <span className="accent">Impact</span>
+            <span>Bem-vindo ao </span>
+            <span className="accent">GPMecatrônica</span>
           </h2>
           <p>
-            Sed autem laudantium dolores. Voluptatem itaque ea consequatur
-            eveniet. Eum quas beatae cumque eum quaerat.
+            Estamos comprometidos com o avanço da pesquisa e da inovação em
+            Mecatrônica. Explore nossas iniciativas e projetos voltados para
+            soluções tecnológicas integradas.
           </p>
           <div className="d-flex">
             <a href="#about" className="btn-get-started">
-              Get Started
+              Saiba Mais
             </a>
             <a
               href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
               className="glightbox btn-watch-video d-flex align-items-center"
             >
               <i className="bi bi-play-circle" />
-              <span>Watch Video</span>
+              <span>Assista ao Vídeo</span>
             </a>
           </div>
         </div>
@@ -60,10 +61,10 @@ export const Hero = () => (
     >
       <div className="container position-relative">
         <div className="row gy-4 mt-5">
-          <HighlightIconBox iconName="gem" title="Lorem" />
-          <HighlightIconBox iconName="easel" title="Ipsum" />
-          <HighlightIconBox iconName="geo-alt" title="Dolor" />
-          <HighlightIconBox iconName="command" title="Sit" />
+          <HighlightIconBox iconName="gem" title="Inovação" />
+          <HighlightIconBox iconName="easel" title="Pesquisa" />
+          <HighlightIconBox iconName="geo-alt" title="Tecnologia" />
+          <HighlightIconBox iconName="command" title="Integração" />
         </div>
       </div>
     </div>
