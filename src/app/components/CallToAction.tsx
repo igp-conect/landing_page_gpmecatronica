@@ -17,15 +17,12 @@ export function CallToAction() {
                 href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
                 className="glightbox play-btn"
               />
-              <h3>Call To Action</h3>
-              <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
-              </p>
-              <a className="cta-btn" href="#">
-                Call To Action
+                    <h3>Junte-se ao GPMecatrônica</h3>
+                            <p>
+                              Faça parte do Grupo de Pesquisa GPMecatrônica do IFRO, onde exploramos soluções inovadoras em robótica, mecatrônica e tecnologia da informação para transformar o futuro.
+                            </p>
+                            <a className="cta-btn" href="#">
+                              Saiba mais
               </a>
             </div>
           </div>
