@@ -2,10 +2,10 @@ export function Contact() {
   return (
     <section id="contact" className="contact section">
       <div className="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
+        <h2>Contato</h2>
         <p>
-          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-          consectetur velit
+          Entre em contato com o GPMecatrônica para saber mais sobre nossos
+          projetos e como colaborar conosco.
         </p>
       </div>
       <div className="container" data-aos="fade-up" data-aos-delay={100}>
@@ -19,8 +19,8 @@ export function Contact() {
               >
                 <i className="bi bi-geo-alt flex-shrink-0" />
                 <div>
-                  <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <h3>Endereço</h3>
+                  <p>A108 Rua Adam, Nova York, NY 535022</p>
                 </div>
               </div>
               <div
@@ -30,7 +30,7 @@ export function Contact() {
               >
                 <i className="bi bi-telephone flex-shrink-0" />
                 <div>
-                  <h3>Call Us</h3>
+                  <h3>Ligue Para Nós</h3>
                   <p>+1 5589 55488 55</p>
                 </div>
               </div>
@@ -41,7 +41,7 @@ export function Contact() {
               >
                 <i className="bi bi-envelope flex-shrink-0" />
                 <div>
-                  <h3>Email Us</h3>
+                  <h3>Envie-nos um Email</h3>
                   <p>info@example.com</p>
                 </div>
               </div>
@@ -52,8 +52,8 @@ export function Contact() {
               >
                 <i className="bi bi-clock flex-shrink-0" />
                 <div>
-                  <h3>Open Hours:</h3>
-                  <p>Mon-Sat: 11AM - 23PM</p>
+                  <h3>Horário de Funcionamento:</h3>
+                  <p>Seg-Sáb: 11h - 23h</p>
                 </div>
               </div>
             </div>
@@ -71,7 +71,7 @@ export function Contact() {
                     type="text"
                     name="name"
                     className="form-control"
-                    placeholder="Your Name"
+                    placeholder="Seu Nome"
                   />
                 </div>
                 <div className="col-md-6 ">
@@ -79,7 +79,7 @@ export function Contact() {
                     type="email"
                     className="form-control"
                     name="email"
-                    placeholder="Your Email"
+                    placeholder="Seu Email"
                   />
                 </div>
                 <div className="col-md-12">
@@ -87,7 +87,7 @@ export function Contact() {
                     type="text"
                     className="form-control"
                     name="subject"
-                    placeholder="Subject"
+                    placeholder="Assunto"
                   />
                 </div>
                 <div className="col-md-12">
@@ -95,17 +95,17 @@ export function Contact() {
                     className="form-control"
                     name="message"
                     rows={8}
-                    placeholder="Message"
+                    placeholder="Mensagem"
                     defaultValue={""}
                   />
                 </div>
                 <div className="col-md-12 text-center">
-                  <div className="loading">Loading</div>
+                  <div className="loading">Carregando</div>
                   <div className="error-message" />
                   <div className="sent-message">
-                    Your message has been sent. Thank you!
+                    Sua mensagem foi enviada. Obrigado!
                   </div>
-                  <button type="submit">Send Message</button>
+                  <button type="submit">Enviar Mensagem</button>
                 </div>
               </div>
             </form>
@@ -115,4 +115,3 @@ export function Contact() {
     </section>
   );
 }
-
