@@ -37,7 +37,7 @@ const NavMenu = () => (
         />
       ))}
       <HeaderDropdown dropdownItems={["Deep down"]} />
-      <NavItem navItemName="Contact" />
+      <NavItem navItemName="Contact" href={"#contact"} />
     </ul>
     <i className="mobile-nav-toggle d-xl-none bi bi-list" />
   </nav>
