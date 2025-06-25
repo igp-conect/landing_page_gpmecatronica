@@ -13,9 +13,16 @@ const HeaderDropdown = ({ dropdownItems }: { dropdownItems: string[] }) => (
   </li>
 );
 
-const NavItem = ({ navItemName }: { navItemName: string }) => (
+const NavItem = ({
+  navItemName,
+  href,
+}: {
+  navItemName: string;
+  href?: string;
+  url?: string;
+}) => (
   <li>
-    <a href={navItemName.toLowerCase()}>{navItemName}</a>
+    <a href={href}>{navItemName}</a>
   </li>
 );
 
@@ -23,7 +30,11 @@ const NavMenu = () => (
   <nav id="navmenu" className="navmenu">
     <ul>
       {["Home", "About", "Services", "Portfolio", "Team"].map((sectionName) => (
-        <NavItem key={sectionName.toLowerCase()} navItemName={sectionName} />
+        <NavItem
+          key={sectionName.toLowerCase()}
+          href={`#${sectionName.toLowerCase()}`}
+          navItemName={sectionName}
+        />
       ))}
       <HeaderDropdown dropdownItems={["Deep down"]} />
       <NavItem navItemName="Contact" />
