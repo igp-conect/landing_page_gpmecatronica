@@ -1,4 +1,14 @@
+"use client";
+
+import { useState } from "react";
+
 export function FAQ() {
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
+
+  const toggleFAQ = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
     <section id="faq" className="faq section">
       <div className="container">
@@ -10,104 +20,56 @@ export function FAQ() {
                 <strong>Questions</strong>
               </h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis
-                aute irure dolor in reprehenderit
+                Descubra as principais perguntas e respostas sobre o
+                GPMecatrônica, nosso trabalho e como você pode colaborar conosco
+                em projetos de tecnologia e inovação.
               </p>
             </div>
           </div>
           <div className="col-lg-8" data-aos="fade-up" data-aos-delay={200}>
             <div className="faq-container">
-              <div className="faq-item faq-active">
-                <h3>
-                  <span className="num">1.</span>{" "}
-                  <span>
-                    Non consectetur a erat nam at lectus urna duis?
-                  </span>
-                </h3>
-                <div className="faq-content">
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
-                    volutpat lacus laoreet non curabitur gravida. Venenatis lectus
-                    magna fringilla urna porttitor rhoncus dolor purus non.
-                  </p>
+              {[
+                {
+                  question: "O que é o GPMecatrônica do IFRO?",
+                  answer:
+                    "O GPMecatrônica é um grupo de pesquisa do Instituto Federal de Rondônia que busca fomentar o desenvolvimento de projetos nas áreas de automação, robótica, eletrônica e inovação tecnológica, promovendo a integração entre alunos, professores e a comunidade.",
+                },
+                {
+                  question: "Como posso participar do GPMecatrônica?",
+                  answer:
+                    "Para participar, você pode entrar em contato com os membros do grupo ou acompanhar os editais de seleção publicados pelo IFRO. Alunos, professores e colaboradores externos com interesse em tecnologia e inovação são bem-vindos.",
+                },
+                {
+                  question: "Quais projetos o grupo já desenvolveu?",
+                  answer:
+                    "O GPMecatrônica já desenvolveu diversos projetos, incluindo sistemas de automação residencial, protótipos de robôs para competições, dispositivos de IoT (Internet das Coisas) e soluções voltadas para a indústria 4.0. Esses projetos têm como objetivo promover a inovação e solucionar problemas reais.",
+                },
+                {
+                  question: "Como o GPMecatrônica contribui para a comunidade?",
+                  answer:
+                    "O grupo realiza workshops, palestras e eventos para disseminar conhecimento tecnológico. Além disso, desenvolve projetos que atendem às necessidades locais, contribuindo para a solução de problemas e impulsionando o desenvolvimento regional.",
+                },
+                {
+                  question: "Quais são os próximos passos do GPMecatrônica?",
+                  answer:
+                    "O grupo planeja expandir suas atividades, buscar parcerias com empresas e outras instituições, além de continuar desenvolvendo projetos inovadores que impactem positivamente a sociedade e o mercado de trabalho. Estamos sempre abertos a novas ideias e colaborações.",
+                },
+              ].map((faq, index) => (
+                <div
+                  key={index}
+                  className={`faq-item ${activeIndex === index ? "faq-active" : ""}`}
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <h3>
+                    <span className="num">{index + 1}.</span>{" "}
+                    <span>{faq.question}</span>
+                  </h3>
+                  <div className="faq-content">
+                    <p>{faq.answer}</p>
+                  </div>
+                  <i className="faq-toggle bi bi-chevron-right" />
                 </div>
-                <i className="faq-toggle bi bi-chevron-right" />
-              </div>
-              <div className="faq-item">
-                <h3>
-                  <span className="num">2.</span>{" "}
-                  <span>
-                    Feugiat scelerisque varius morbi enim nunc faucibus a
-                    pellentesque?
-                  </span>
-                </h3>
-                <div className="faq-content">
-                  <p>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant
-                    morbi. Id interdum velit laoreet id donec ultrices. Fringilla
-                    phasellus faucibus scelerisque eleifend donec pretium. Est
-                    pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
-                    cursus turpis massa tincidunt dui.
-                  </p>
-                </div>
-                <i className="faq-toggle bi bi-chevron-right" />
-              </div>
-              <div className="faq-item">
-                <h3>
-                  <span className="num">3.</span>{" "}
-                  <span>
-                    Dolor sit amet consectetur adipiscing elit pellentesque?
-                  </span>
-                </h3>
-                <div className="faq-content">
-                  <p>
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices
-                    sagittis orci. Faucibus pulvinar elementum integer enim. Sem
-                    nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
-                    pellentesque eu tincidunt. Lectus urna duis convallis convallis
-                    tellus. Urna molestie at elementum eu facilisis sed odio morbi
-                    quis
-                  </p>
-                </div>
-                <i className="faq-toggle bi bi-chevron-right" />
-              </div>
-              <div className="faq-item">
-                <h3>
-                  <span className="num">4.</span>{" "}
-                  <span>
-                    Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
-                  </span>
-                </h3>
-                <div className="faq-content">
-                  <p>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant
-                    morbi. Id interdum velit laoreet id donec ultrices. Fringilla
-                    phasellus faucibus scelerisque eleifend donec pretium. Est
-                    pellentesque elit ullamcorper dignissim. Mauris ultrices eros in
-                    cursus turpis massa tincidunt dui.
-                  </p>
-                </div>
-                <i className="faq-toggle bi bi-chevron-right" />
-              </div>
-              <div className="faq-item">
-                <h3>
-                  <span className="num">5.</span>{" "}
-                  <span>
-                    Tempus quam pellentesque nec nam aliquam sem et tortor
-                    consequat?
-                  </span>
-                </h3>
-                <div className="faq-content">
-                  <p>
-                    Molestie a iaculis at erat pellentesque adipiscing commodo.
-                    Dignissim suspendisse in est ante in. Nunc vel risus commodo
-                    viverra maecenas accumsan. Sit amet nisl suscipit adipiscing
-                    bibendum est. Purus gravida quis blandit turpis cursus in
-                  </p>
-                </div>
-                <i className="faq-toggle bi bi-chevron-right" />
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -115,4 +77,3 @@ export function FAQ() {
     </section>
   );
 }
-
