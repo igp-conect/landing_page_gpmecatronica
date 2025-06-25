@@ -48,8 +48,11 @@ export const Stats = () => (
         </div>
         <div className="col-lg-7">
           <div className="row gy-4">
-            {statItems.map((props) => (
-              <StatItem {...props} />
+            {statItems.map((props, i) => (
+              <StatItem
+                key={`stat-${i}${props.highlight.toLowerCase()}`}
+                {...props}
+              />
             ))}
           </div>
         </div>
