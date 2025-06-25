@@ -2,10 +2,10 @@ export function RecentPosts() {
   return (
     <section id="recent-posts" className="recent-posts section">
       <div className="container section-title" data-aos="fade-up">
-        <h2>Recent Blog Posts</h2>
+        <h2>Últimos Artigos</h2>
         <p>
-          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-          consectetur velit
+          Confira os artigos mais recentes publicados pelos membros do
+          GPMecatrônica, abordando temas inovadores em tecnologia e pesquisa.
         </p>
       </div>
       <div className="container">
@@ -117,4 +117,3 @@ export function RecentPosts() {
     </section>
   );
 }
-
