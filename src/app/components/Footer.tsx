@@ -1,4 +1,35 @@
 export function Footer() {
+  const footerLinks = [
+    {
+      title: "Useful Links",
+      links: [
+        { label: "Home", href: "#" },
+        { label: "About us", href: "#" },
+        { label: "Services", href: "#" },
+        { label: "Terms of service", href: "#" },
+        { label: "Privacy policy", href: "#" },
+      ],
+    },
+    {
+      title: "Our Services",
+      links: [
+        { label: "Web Design", href: "#" },
+        { label: "Web Development", href: "#" },
+        { label: "Product Management", href: "#" },
+        { label: "Marketing", href: "#" },
+        { label: "Graphic Design", href: "#" },
+      ],
+    },
+  ];
+
+  const contactInfo = {
+    address: "A108 Adam Street",
+    city: "New York, NY 535022",
+    country: "United States",
+    phone: "+1 5589 55488 55",
+    email: "info@example.com",
+  };
+
   return (
     <footer id="footer" className="footer accent-background">
       <div className="container footer-top">
@@ -8,75 +39,42 @@ export function Footer() {
               <span className="sitename">Impact</span>
             </a>
             <p>
-              Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada
-              terra videa magna derita valies darta donna mare fermentum iaculis
-              eu non diam phasellus.
+              Cras fermentum odio eu feugiat lide par naso tierra. Justo eget
+              nada terra videa magna derita valies darta donna mare fermentum
+              iaculis eu non diam phasellus.
             </p>
             <div className="social-links d-flex mt-4">
-              <a href="">
-                <i className="bi bi-twitter-x" />
-              </a>
-              <a href="">
-                <i className="bi bi-facebook" />
-              </a>
-              <a href="">
-                <i className="bi bi-instagram" />
-              </a>
-              <a href="">
-                <i className="bi bi-linkedin" />
-              </a>
+              {["twitter-x", "facebook", "instagram", "linkedin"].map(
+                (icon) => (
+                  <a href="" key={icon}>
+                    <i className={`bi bi-${icon}`} />
+                  </a>
+                ),
+              )}
             </div>
           </div>
-          <div className="col-lg-2 col-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">About us</a>
-              </li>
-              <li>
-                <a href="#">Services</a>
-              </li>
-              <li>
-                <a href="#">Terms of service</a>
-              </li>
-              <li>
-                <a href="#">Privacy policy</a>
-              </li>
-            </ul>
-          </div>
-          <div className="col-lg-2 col-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li>
-                <a href="#">Web Design</a>
-              </li>
-              <li>
-                <a href="#">Web Development</a>
-              </li>
-              <li>
-                <a href="#">Product Management</a>
-              </li>
-              <li>
-                <a href="#">Marketing</a>
-              </li>
-              <li>
-                <a href="#">Graphic Design</a>
-              </li>
-            </ul>
-          </div>
+          {footerLinks.map(({ title, links }) => (
+            <div className="col-lg-2 col-6 footer-links" key={title}>
+              <h4>{title}</h4>
+              <ul>
+                {links.map(({ label, href }) => (
+                  <li key={label}>
+                    <a href={href}>{label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
           <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
             <h4>Contact Us</h4>
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p>United States</p>
+            <p>{contactInfo.address}</p>
+            <p>{contactInfo.city}</p>
+            <p>{contactInfo.country}</p>
             <p className="mt-4">
-              <strong>Phone:</strong> <span>+1 5589 55488 55</span>
+              <strong>Phone:</strong> <span>{contactInfo.phone}</span>
             </p>
             <p>
-              <strong>Email:</strong> <span>info@example.com</span>
+              <strong>Email:</strong> <span>{contactInfo.email}</span>
             </p>
           </div>
         </div>
@@ -95,4 +93,3 @@ export function Footer() {
     </footer>
   );
 }
-
