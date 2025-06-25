@@ -34,7 +34,6 @@ export default function Home() {
       <main className="main">
         <Hero />
         <About />
-        <Stats />
         <Portfolio />
         <Team />
         <CallToAction />
