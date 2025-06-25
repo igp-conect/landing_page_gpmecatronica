@@ -17,9 +17,8 @@ import { FAQ } from "./components/FAQ";
 import { Contact } from "./components/Contact";
 import { CallToAction } from "./components/CallToAction";
 import { Portfolio } from "./components/Portfolio/Portfolio";
-
-// import "../../public/assets/vendor/aos/aos.css";
-// TODO: Implementar a biblioteca AOS e as demais bibliotecas do template para funcionar com o React.
+import { RecentPosts } from "./components/RecentPosts";
+import { Team } from "./components/Team";
 
 export default function Home() {
   return (
@@ -37,8 +36,10 @@ export default function Home() {
         <About />
         <Stats />
         <Portfolio />
+        <Team />
         <CallToAction />
         <Services />
+        <RecentPosts />
         <FAQ />
         <Contact />
         <ScrollTopAndPreloader />
