@@ -36,17 +36,19 @@ const NavItem = ({
 const NavMenu = () => (
   <nav id="navmenu" className="navmenu">
     <ul>
-      {["Início", "Sobre", "Serviços", "Portfólio", "Equipe"].map(
-        (sectionName) => (
-          <NavItem
-            key={sectionName.toLowerCase()}
-            href={`#${sectionName.toLowerCase()}`}
-            navItemName={sectionName}
-          />
-        ),
-      )}
-      <HeaderDropdown dropdownTitle="Mais" dropdownItems={["Mais ainda"]} />
-      <NavItem navItemName="Contact" href={"#contact"} />
+      {[
+        ["Início", "#hero"],
+        ["Sobre", "#about"],
+        ["Serviços", "#services"],
+        ["Portfólio", "#portfolio"],
+        ["Contate-nos", "#contact"],
+      ].map(([sectionName, href]) => (
+        <NavItem
+          key={sectionName.toLowerCase()}
+          href={href}
+          navItemName={sectionName}
+        />
+      ))}
     </ul>
     <i className="mobile-nav-toggle d-xl-none bi bi-list" />
   </nav>
