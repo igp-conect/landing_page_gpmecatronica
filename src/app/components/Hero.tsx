@@ -61,10 +61,10 @@ export const Hero = () => (
     >
       <div className="container position-relative">
         <div className="row gy-4 mt-5">
-          <HighlightIconBox iconName="gem" title="Inovação" />
-          <HighlightIconBox iconName="easel" title="Pesquisa" />
-          <HighlightIconBox iconName="geo-alt" title="Tecnologia" />
-          <HighlightIconBox iconName="command" title="Integração" />
+          <HighlightIconBox iconName="lightbulb-fill" title="Inovação" />
+          <HighlightIconBox iconName="search" title="Pesquisa" />
+          <HighlightIconBox iconName="pc-display" title="Tecnologia" />
+          <HighlightIconBox iconName="people-fill" title="Integração" />
         </div>
       </div>
     </div>
