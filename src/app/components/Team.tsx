@@ -49,18 +49,13 @@ export function Team() {
                 <h4>{member.name}</h4>
                 <span>{member.role}</span>
                 <div className="social">
-                  <a href="">
-                    <i className="bi bi-twitter-x" />
-                  </a>
-                  <a href="">
-                    <i className="bi bi-facebook" />
-                  </a>
-                  <a href="">
-                    <i className="bi bi-instagram" />
-                  </a>
-                  <a href="">
-                    <i className="bi bi-linkedin" />
-                  </a>
+                  {["twitter-x", "facebook", "instagram", "linkedin"].map(
+                    (platform, idx) => (
+                      <a key={idx} href="">
+                        <i className={`bi bi-${platform}`} />
+                      </a>
+                    ),
+                  )}
                 </div>
               </div>
             </div>
