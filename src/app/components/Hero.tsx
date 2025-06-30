@@ -50,7 +50,7 @@ export const Hero = () => (
           </div>
         </div>
         <div className="col-lg-5 order-1 order-lg-2">
-          <img src="assets/img/hero-img.svg" className="img-fluid" alt="" />
+          <img src="assets/img/hero.svg" className="img-fluid" alt="" />
         </div>
       </div>
     </div>
