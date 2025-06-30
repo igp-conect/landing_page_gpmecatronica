@@ -3,10 +3,7 @@ type TeamMember = {
   role: string;
   image: string;
   socialLinks: {
-    twitter: string;
-    facebook: string;
-    instagram: string;
-    linkedin: string;
+    [K in "twitter" | "facebook" | "instagram" | "linkedin"]?: string;
   };
 };
 
@@ -19,8 +16,6 @@ export function Team() {
       socialLinks: {
         twitter: "https://twitter.com/walterwhite",
         facebook: "https://facebook.com/walterwhite",
-        instagram: "https://instagram.com/walterwhite",
-        linkedin: "https://linkedin.com/in/walterwhite",
       },
     },
     {
@@ -28,8 +23,6 @@ export function Team() {
       role: "Marketing",
       image: "assets/img/team/team-2.jpg",
       socialLinks: {
-        twitter: "https://twitter.com/sarahjhinson",
-        facebook: "https://facebook.com/sarahjhinson",
         instagram: "https://instagram.com/sarahjhinson",
         linkedin: "https://linkedin.com/in/sarahjhinson",
       },
@@ -39,9 +32,6 @@ export function Team() {
       role: "Content",
       image: "assets/img/team/team-3.jpg",
       socialLinks: {
-        twitter: "https://twitter.com/williamanderson",
-        facebook: "https://facebook.com/williamanderson",
-        instagram: "https://instagram.com/williamanderson",
         linkedin: "https://linkedin.com/in/williamanderson",
       },
     },
@@ -51,7 +41,6 @@ export function Team() {
       image: "assets/img/team/team-4.jpg",
       socialLinks: {
         twitter: "https://twitter.com/amandajepson",
-        facebook: "https://facebook.com/amandajepson",
         instagram: "https://instagram.com/amandajepson",
         linkedin: "https://linkedin.com/in/amandajepson",
       },
