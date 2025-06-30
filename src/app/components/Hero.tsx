@@ -41,7 +41,7 @@ export const Hero = () => (
               Saiba Mais
             </a>
             <a
-              href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+              href="https://youtu.be/L2jihcWhsYg"
               className="glightbox btn-watch-video d-flex align-items-center"
             >
               <i className="bi bi-play-circle" />

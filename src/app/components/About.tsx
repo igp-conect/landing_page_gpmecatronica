@@ -75,7 +75,7 @@ export const About = () => (
                 alt="Imagem de projeto do GPMecatrônica"
               />
               <a
-                href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+                href="https://youtu.be/L2jihcWhsYg"
                 className="glightbox pulsating-play-btn"
               />
             </div>
