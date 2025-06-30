@@ -9,7 +9,6 @@ import "../../public/assets/vendor/aos/aos.js";
 import { PageHeader } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { About } from "./components/About";
-import { Stats } from "./components/Stats";
 import { Services } from "./components/Services";
 import { ScrollTopAndPreloader } from "./components/ScrollTopAndPreloader";
 import { Footer } from "./components/Footer";
@@ -38,7 +37,6 @@ export default function Home() {
         <Team />
         <CallToAction />
         <Services />
-        <RecentPosts />
         <FAQ />
         <Contact />
         <ScrollTopAndPreloader />
