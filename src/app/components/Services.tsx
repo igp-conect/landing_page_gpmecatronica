@@ -45,12 +45,6 @@ export function Services() {
                 </div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-                <a
-                  href="service-details.html"
-                  className="readmore stretched-link"
-                >
-                  Saiba mais <i className="bi bi-arrow-right" />
-                </a>
               </div>
             </div>
           ))}
