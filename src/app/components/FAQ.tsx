@@ -16,8 +16,8 @@ export function FAQ() {
           <div className="col-lg-4" data-aos="fade-up" data-aos-delay={100}>
             <div className="content px-xl-5">
               <h3>
-                <span>Frequently Asked </span>
-                <strong>Questions</strong>
+                <span>Perguntas Frequentes </span>
+                <strong>FAQ</strong>
               </h3>
               <p>
                 Descubra as principais perguntas e respostas sobre o
