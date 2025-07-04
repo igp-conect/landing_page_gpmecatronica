@@ -1,16 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { PortfolioItemView } from "./PortfolioItemView"; // adjust path as needed
-import { portfolioItems } from ".";
+import { researchProjects } from ".";
 import { AnimatePresence, motion } from "framer-motion";
+import { ResearchProjectCard } from "@/components/Portfolio/research-project-card";
 
 const filters = [
-  { label: "All", value: "*" },
-  { label: "App", value: "app" },
-  { label: "Product", value: "product" },
-  { label: "Branding", value: "branding" },
-  { label: "Books", value: "books" },
+  { label: "Todos", value: "*" },
+  { label: "Arte", value: "arte" },
 ];
 
 export const Portfolio = () => {
@@ -18,16 +15,18 @@ export const Portfolio = () => {
 
   const filteredItems =
     activeFilter === "*"
-      ? portfolioItems
-      : portfolioItems.filter((item) => item.category === activeFilter);
+      ? researchProjects
+      : researchProjects.filter((item) =>
+          item.tags.some((tag) => tag.toLowerCase() == activeFilter),
+        );
 
   return (
     <section id="portfolio" className="portfolio section">
       <div className="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
+        <h2>Conheça alguns dos nossos projetos de pesquisa</h2>
         <p>
-          Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-          consectetur velit
+          Explore nossos projetos de pesquisa e saiba um pouco do que está
+          acontecendo no GPMecatrônica
         </p>
       </div>
 
@@ -55,22 +54,17 @@ export const Portfolio = () => {
           data-aos-delay={200}
         >
           <AnimatePresence>
-            {filteredItems.map((item, index) => (
+            {filteredItems.map((props, index) => (
               <motion.div
-                className="col-lg-4 col-md-6"
-                key={item.name + index}
+                className="col-md-6"
+                key={props.title + index}
                 layout
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.3 }}
               >
-                <PortfolioItemView
-                  name={item.name}
-                  description={item.description}
-                  category={item.category}
-                  image={{ src: item.image.src, alt: item.image.alt }}
-                />
+                <ResearchProjectCard {...props} />
               </motion.div>
             ))}
           </AnimatePresence>

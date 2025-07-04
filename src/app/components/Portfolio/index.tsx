@@ -1,93 +1,15 @@
-export type PortfolioItem = {
-  name: string;
-  description: string;
-  category: string;
-  image: {
-    src: string;
-    alt: string;
-  };
-};
+import { ResearchProjectCardProps } from "@/components/Portfolio/research-project-card";
 
-export const portfolioItems: PortfolioItem[] = [
+export const researchProjects: ResearchProjectCardProps[] = [
   {
-    name: "App 1",
-    description: "Lorem",
-    category: "app",
+    title: "Almanaque didático",
+    leaders: ["Prof. Daniela Toda"],
+    shortDescription:
+      "No Almanaque Didático, docentes e estudantes uniram criatividade e tecnologia para transformar conceitos de análise orientada a objetos em uma narrativa envolvente. Com personagens e cenários inspirados no campus, esse e‑book em formato de HQ foi lançado no final de 2020 com o objetivo de tornar o aprendizado de Informática mais acessível e lúdico, despertando o interesse por programação de forma leve e contextualizada. O projeto ainda se mantem ativo, com expectativas de novas edições no horizonte.",
+    tags: ["Arte"],
     image: {
-      src: "assets/img/portfolio/app-1.jpg",
-      alt: "App 1",
-    },
-  },
-  {
-    name: "App 1",
-    description: "Lorem",
-    category: "app",
-    image: {
-      src: "assets/img/portfolio/app-1.jpg",
-      alt: "App 1",
-    },
-  },
-  {
-    name: "Branding 1",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    category: "branding",
-    image: {
-      src: "assets/img/portfolio/branding-1.jpg",
-      alt: "Branding 1",
-    },
-  },
-  {
-    name: "Books 1",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    category: "books",
-    image: {
-      src: "assets/img/portfolio/books-1.jpg",
-      alt: "Books 1",
-    },
-  },
-  {
-    name: "App 2",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    category: "app",
-    image: {
-      src: "assets/img/portfolio/app-2.jpg",
-      alt: "App 2",
-    },
-  },
-  {
-    name: "Product 2",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    category: "product",
-    image: {
-      src: "assets/img/portfolio/product-2.jpg",
-      alt: "Product 2",
-    },
-  },
-  {
-    name: "Branding 2",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    category: "branding",
-    image: {
-      src: "assets/img/portfolio/branding-2.jpg",
-      alt: "Branding 2",
-    },
-  },
-  {
-    name: "Books 2",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    category: "books",
-    image: {
-      src: "assets/img/portfolio/books-2.jpg",
-      alt: "Books 2",
-    },
-  },
-  {
-    name: "App 3",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    category: "app",
-    image: {
-      src: "assets/img/portfolio/app-3.jpg",
-      alt: "App 3",
+      src: "https://portal.ifro.edu.br/images/Jornalismo/02-Fevereiro-2021/04-02/almanaque1.png",
+      alt: "Recompor Web",
     },
   },
 ];
