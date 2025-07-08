@@ -1,3 +1,7 @@
+"use client";
+
+import { GalleryName, openGlightboxVideo } from "./lib/Glightbox";
+
 export function CallToAction() {
   return (
     <section
@@ -17,8 +21,10 @@ export function CallToAction() {
           <div className="col-xl-10">
             <div className="text-center">
               <a
-                href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
-                className="glightbox play-btn"
+                className="play-btn"
+                onClick={(e) =>
+                  openGlightboxVideo(e, GalleryName.PresentationVideo)
+                }
               />
               <h3>Junte-se ao GPMecatrônica</h3>
               <p>

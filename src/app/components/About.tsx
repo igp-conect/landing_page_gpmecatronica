@@ -1,3 +1,7 @@
+"use client";
+
+import { GalleryName, openGlightboxVideo } from "./lib/Glightbox";
+
 export const About = () => {
   const aboutPhrases = [
     "Desenvolvimento de projetos inovadores em automação e robótica.",
@@ -67,8 +71,10 @@ export const About = () => {
                   alt="Imagem de projeto do GPMecatrônica"
                 />
                 <a
-                  href="https://youtu.be/L2jihcWhsYg"
-                  className="glightbox pulsating-play-btn"
+                  onClick={(e) =>
+                    openGlightboxVideo(e, GalleryName.PresentationVideo)
+                  }
+                  className="pulsating-play-btn"
                 />
               </div>
             </div>
