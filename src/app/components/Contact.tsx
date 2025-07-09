@@ -1,14 +1,16 @@
+import { CONFIG } from "../configuration";
+
 export function Contact() {
   const infoItems = [
     {
       icon: "bi-telephone",
       title: "Ligue Para Nós",
-      content: "+1 5589 55488 55",
+      content: CONFIG.phoneNumber,
     },
     {
       icon: "bi-envelope",
       title: "Envie-nos um Email",
-      content: "info@example.com",
+      content: CONFIG.contactEmail,
     },
     {
       icon: "bi-clock",

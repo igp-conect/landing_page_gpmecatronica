@@ -1,6 +1,5 @@
 type TeamMember = {
   name: string;
-  role: string;
   image: string;
   socialLinks: {
     [K in "twitter" | "facebook" | "instagram" | "linkedin"]?: string;
@@ -10,8 +9,7 @@ type TeamMember = {
 export function Team() {
   const teamMembers: TeamMember[] = [
     {
-      name: "Walter White",
-      role: "Web Development",
+      name: "Anderson Seixas",
       image: "assets/img/team/team-1.jpg",
       socialLinks: {
         twitter: "https://twitter.com/walterwhite",
@@ -19,8 +17,7 @@ export function Team() {
       },
     },
     {
-      name: "Sarah Jhinson",
-      role: "Marketing",
+      name: "Daniela Tissuya Silva Toda",
       image: "assets/img/team/team-2.jpg",
       socialLinks: {
         instagram: "https://instagram.com/sarahjhinson",
@@ -28,16 +25,23 @@ export function Team() {
       },
     },
     {
-      name: "William Anderson",
-      role: "Content",
+      name: "Camila",
       image: "assets/img/team/team-3.jpg",
       socialLinks: {
         linkedin: "https://linkedin.com/in/williamanderson",
       },
     },
     {
-      name: "Amanda Jepson",
-      role: "Accountant",
+      name: "Fernando",
+      image: "assets/img/team/team-4.jpg",
+      socialLinks: {
+        twitter: "https://twitter.com/amandajepson",
+        instagram: "https://instagram.com/amandajepson",
+        linkedin: "https://linkedin.com/in/amandajepson",
+      },
+    },
+    {
+      name: "Sabrina Feliciano",
       image: "assets/img/team/team-4.jpg",
       socialLinks: {
         twitter: "https://twitter.com/amandajepson",
@@ -73,7 +77,6 @@ export function Team() {
                   alt={member.name}
                 />
                 <h4>{member.name}</h4>
-                <span>{member.role}</span>
                 <div className="social">
                   {Object.entries(member.socialLinks).map(
                     ([platform, link], idx) => (

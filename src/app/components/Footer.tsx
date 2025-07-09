@@ -1,3 +1,5 @@
+import { CONFIG } from "../configuration";
+
 export function Footer() {
   const footerLinks = [
     {
@@ -24,8 +26,8 @@ export function Footer() {
     address: "Instituto Federal de Rondônia (IFRO)",
     city: "Campus Calama, RO",
     country: "Brasil",
-    phone: "+55 69 XXXX XXXX",
-    email: "gpmecatronica@ifro.edu.br",
+    phone: CONFIG.phoneNumber,
+    email: CONFIG.contactEmail,
   };
 
   return (
