@@ -1,4 +1,42 @@
 export function Contact() {
+  const infoItems = [
+    {
+      icon: "bi-telephone",
+      title: "Ligue Para Nós",
+      content: "+1 5589 55488 55",
+    },
+    {
+      icon: "bi-envelope",
+      title: "Envie-nos um Email",
+      content: "info@example.com",
+    },
+    {
+      icon: "bi-clock",
+      title: "Horário de Funcionamento:",
+      content: "Seg-Sáb: 11h - 23h",
+    },
+  ];
+
+  const InfoItem = ({
+    icon,
+    title,
+    content,
+    delay,
+  }: {
+    icon: string;
+    title: string;
+    content: string;
+    delay: number;
+  }) => (
+    <div className="info-item d-flex" data-aos="fade-up" data-aos-delay={delay}>
+      <i className={`${icon} flex-shrink-0`} />
+      <div>
+        <h3>{title}</h3>
+        <p>{content}</p>
+      </div>
+    </div>
+  );
+
   return (
     <section id="contact" className="contact section">
       <div className="container section-title" data-aos="fade-up">
@@ -12,50 +50,15 @@ export function Contact() {
         <div className="row gx-lg-0 gy-4">
           <div className="col-lg-4">
             <div className="info-container d-flex flex-column align-items-center justify-content-center">
-              <div
-                className="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay={200}
-              >
-                <i className="bi bi-geo-alt flex-shrink-0" />
-                <div>
-                  <h3>Endereço</h3>
-                  <p>A108 Rua Adam, Nova York, NY 535022</p>
-                </div>
-              </div>
-              <div
-                className="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay={300}
-              >
-                <i className="bi bi-telephone flex-shrink-0" />
-                <div>
-                  <h3>Ligue Para Nós</h3>
-                  <p>+1 5589 55488 55</p>
-                </div>
-              </div>
-              <div
-                className="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay={400}
-              >
-                <i className="bi bi-envelope flex-shrink-0" />
-                <div>
-                  <h3>Envie-nos um Email</h3>
-                  <p>info@example.com</p>
-                </div>
-              </div>
-              <div
-                className="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay={500}
-              >
-                <i className="bi bi-clock flex-shrink-0" />
-                <div>
-                  <h3>Horário de Funcionamento:</h3>
-                  <p>Seg-Sáb: 11h - 23h</p>
-                </div>
-              </div>
+              {infoItems.map((item, index) => (
+                <InfoItem
+                  key={index}
+                  icon={`bi ${item.icon}`}
+                  title={item.title}
+                  content={item.content}
+                  delay={(index + 1) * 100}
+                />
+              ))}
             </div>
           </div>
           <div className="col-lg-8">
