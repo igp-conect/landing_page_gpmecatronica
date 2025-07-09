@@ -1,6 +1,6 @@
 "use client";
 
-import { GalleryName, openGlightboxVideo } from "./lib/Glightbox";
+import { GalleryName, openGlightboxVideo } from "@/components/lib/Glightbox";
 
 export const About = () => {
   const aboutPhrases = [

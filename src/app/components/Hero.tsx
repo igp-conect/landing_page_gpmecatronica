@@ -1,6 +1,6 @@
 "use client";
 
-import { GalleryName } from "./lib/Glightbox";
+import { GalleryName } from "@/components/lib/Glightbox";
 
 type IconBoxProps = {
   title: string;
@@ -48,7 +48,7 @@ export const Hero = () => {
               <a
                 href="https://youtu.be/L2jihcWhsYg"
                 className="glightbox btn-watch-video d-flex align-items-center"
-                data-gallery={GalleryName.presentationVideo}
+                data-gallery={GalleryName.PresentationVideo}
                 data-type="video"
               >
                 <i className="bi bi-play-circle" />
