@@ -49,7 +49,7 @@ export function Contact() {
       <div className="container" data-aos="fade-up" data-aos-delay={100}>
         <div className="row gx-lg-0 gy-4">
           <div className="col-lg-4">
-            <div className="info-container d-flex flex-column align-items-center justify-content-center">
+            <div className="info-container d-flex flex-column align-items-center">
               {infoItems.map((item, index) => (
                 <InfoItem
                   key={index}
