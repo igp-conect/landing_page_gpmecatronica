@@ -20,6 +20,7 @@
 //   </li>
 // );
 
+import Image from "next/image";
 import { CONFIG } from "../configuration";
 
 const NavItem = ({
@@ -86,7 +87,7 @@ export const PageHeader = () => (
     <div className="branding d-flex align-items-center">
       <div className="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" className="logo d-flex align-items-center">
-          <img src="assets/img/logo.png" alt="" />
+          <Image src="assets/img/logo.png" alt="" />
           <h1 className="sitename">GPMecatrônica</h1>
           <span>.</span>
         </a>

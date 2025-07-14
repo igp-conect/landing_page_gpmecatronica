@@ -1,6 +1,7 @@
 "use client";
 
 import { GalleryName, openGlightboxVideo } from "@/components/lib/Glightbox";
+import Image from "next/image";
 
 export const About = () => {
   const aboutPhrases = [
@@ -26,7 +27,7 @@ export const About = () => {
         <div className="row gy-4">
           <div className="col-lg-6" data-aos="fade-up" data-aos-delay={100}>
             <h3>Promovendo inovação e excelência em Mecatrônica</h3>
-            <img
+            <Image
               src="assets/img/about.jpg"
               className="img-fluid rounded-4 mb-4"
               alt="Imagem sobre o GPMecatrônica"
@@ -47,8 +48,8 @@ export const About = () => {
           <div className="col-lg-6" data-aos="fade-up" data-aos-delay={250}>
             <div className="content ps-0 ps-lg-5">
               <p className="fst-italic">
-                "Transformando ideias em realidade através da inovação e
-                pesquisa aplicada."
+                &quot;Transformando ideias em realidade através da inovação e
+                pesquisa aplicada.&quot;
               </p>
               <ul>
                 {aboutPhrases.map((phrase, index) => (
@@ -65,7 +66,7 @@ export const About = () => {
                 desenvolvimento sustentável.
               </p>
               <div className="position-relative mt-4">
-                <img
+                <Image
                   src="assets/img/about-2.jpg"
                   className="img-fluid rounded-4"
                   alt="Imagem de projeto do GPMecatrônica"

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type TeamMember = {
   name: string;
   image: string;
@@ -71,7 +73,7 @@ export function Team() {
               data-aos-delay={(index + 1) * 100}
             >
               <div className="member">
-                <img
+                <Image
                   src={member.image}
                   className="img-fluid"
                   alt={member.name}

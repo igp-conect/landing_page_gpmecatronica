@@ -1,6 +1,7 @@
 "use client";
 
 import { GalleryName } from "@/components/lib/Glightbox";
+import Image from "next/image";
 
 type IconBoxProps = {
   title: string;
@@ -57,7 +58,7 @@ export const Hero = () => {
             </div>
           </div>
           <div className="col-lg-5 order-1 order-lg-2">
-            <img src="assets/img/hero.svg" className="img-fluid" alt="" />
+            <Image src="assets/img/hero.svg" className="img-fluid" alt="" />
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { GalleryName, openGlightboxVideo } from "@/components/lib/Glightbox";
+import Image from "next/image";
 
 export function CallToAction() {
   return (
@@ -9,7 +10,7 @@ export function CallToAction() {
       className="call-to-action section dark-background"
     >
       <div className="container">
-        <img
+        <Image
           src="https://portal.ifro.edu.br/images/Jornalismo/08-Agosto-2022/02-08/Campus_Calama_-_IFRO.JPG"
           alt="Imagem aérea do IFRO Campus Porto Velho Calama"
         />

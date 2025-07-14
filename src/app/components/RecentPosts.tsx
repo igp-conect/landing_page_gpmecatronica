@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function RecentPosts() {
   const posts = [
     {
@@ -49,14 +51,14 @@ export function RecentPosts() {
             >
               <article>
                 <div className="post-img">
-                  <img src={post.imgSrc} alt="" className="img-fluid" />
+                  <Image src={post.imgSrc} alt="" className="img-fluid" />
                 </div>
                 <p className="post-category">{post.category}</p>
                 <h2 className="title">
                   <a href={post.link}>{post.title}</a>
                 </h2>
                 <div className="d-flex align-items-center">
-                  <img
+                  <Image
                     src={post.authorImg}
                     alt=""
                     className="img-fluid post-author-img flex-shrink-0"
