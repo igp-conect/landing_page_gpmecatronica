@@ -11,10 +11,10 @@ export function CallToAction() {
     >
       <div className="container">
         <Image
-          src="https://portal.ifro.edu.br/images/Jornalismo/08-Agosto-2022/02-08/Campus_Calama_-_IFRO.JPG"
+          src="https://portal.ifro.edu.br/images/Jornalismo/Jornalismo-2025/03-Marco-2025/18-03/Ifro_Calama.jpeg"
           alt="Imagem aérea do IFRO Campus Porto Velho Calama"
-          width={1024}
-          height={576}
+          width={1600}
+          height={900}
         />
         <div
           className="content row justify-content-center"
