@@ -1,8 +1,13 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+
+import avatarAnderson from "@assets/img/team/team-1.jpg";
+import avatarDani from "@assets/img/team/team-2.jpg";
+import avatarCamila from "@assets/img/team/team-3.jpg";
+import avatarFernando from "@assets/img/team/team-4.jpg";
 
 type TeamMember = {
   name: string;
-  image: string;
+  image: StaticImageData;
   socialLinks: {
     [K in "twitter" | "facebook" | "instagram" | "linkedin"]?: string;
   };
@@ -12,7 +17,7 @@ export function Team() {
   const teamMembers: TeamMember[] = [
     {
       name: "Anderson Seixas",
-      image: "assets/img/team/team-1.jpg",
+      image: avatarAnderson,
       socialLinks: {
         twitter: "https://twitter.com/walterwhite",
         facebook: "https://facebook.com/walterwhite",
@@ -20,7 +25,7 @@ export function Team() {
     },
     {
       name: "Daniela Tissuya Silva Toda",
-      image: "assets/img/team/team-2.jpg",
+      image: avatarDani,
       socialLinks: {
         instagram: "https://instagram.com/sarahjhinson",
         linkedin: "https://linkedin.com/in/sarahjhinson",
@@ -28,14 +33,14 @@ export function Team() {
     },
     {
       name: "Camila",
-      image: "assets/img/team/team-3.jpg",
+      image: avatarCamila,
       socialLinks: {
         linkedin: "https://linkedin.com/in/williamanderson",
       },
     },
     {
       name: "Fernando",
-      image: "assets/img/team/team-4.jpg",
+      image: avatarFernando,
       socialLinks: {
         twitter: "https://twitter.com/amandajepson",
         instagram: "https://instagram.com/amandajepson",
@@ -44,7 +49,7 @@ export function Team() {
     },
     {
       name: "Sabrina Feliciano",
-      image: "assets/img/team/team-4.jpg",
+      image: avatarCamila,
       socialLinks: {
         twitter: "https://twitter.com/amandajepson",
         instagram: "https://instagram.com/amandajepson",
@@ -73,11 +78,13 @@ export function Team() {
               data-aos-delay={(index + 1) * 100}
             >
               <div className="member">
-                <Image
-                  src={member.image}
-                  className="img-fluid"
-                  alt={member.name}
-                />
+                <div className="w-64 h-64 overflow-hidden rounded-lg">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <h4>{member.name}</h4>
                 <div className="social">
                   {Object.entries(member.socialLinks).map(

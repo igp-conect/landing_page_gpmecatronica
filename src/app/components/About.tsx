@@ -1,6 +1,8 @@
 "use client";
 
 import { GalleryName, openGlightboxVideo } from "@/components/lib/Glightbox";
+import aboutImage from "@assets/img/about.jpg";
+import aboutSecondaryImage from "@assets/img/about-2.jpg";
 import Image from "next/image";
 
 export const About = () => {
@@ -28,7 +30,7 @@ export const About = () => {
           <div className="col-lg-6" data-aos="fade-up" data-aos-delay={100}>
             <h3>Promovendo inovação e excelência em Mecatrônica</h3>
             <Image
-              src="assets/img/about.jpg"
+              src={aboutImage}
               className="img-fluid rounded-4 mb-4"
               alt="Imagem sobre o GPMecatrônica"
             />
@@ -67,7 +69,7 @@ export const About = () => {
               </p>
               <div className="position-relative mt-4">
                 <Image
-                  src="assets/img/about-2.jpg"
+                  src={aboutSecondaryImage}
                   className="img-fluid rounded-4"
                   alt="Imagem de projeto do GPMecatrônica"
                 />

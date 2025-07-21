@@ -13,6 +13,8 @@ export function CallToAction() {
         <Image
           src="https://portal.ifro.edu.br/images/Jornalismo/08-Agosto-2022/02-08/Campus_Calama_-_IFRO.JPG"
           alt="Imagem aérea do IFRO Campus Porto Velho Calama"
+          width={1024}
+          height={576}
         />
         <div
           className="content row justify-content-center"
