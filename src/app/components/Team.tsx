@@ -68,25 +68,25 @@ export function Team() {
           tecnologia.
         </p>
       </div>
-      <div className="container">
-        <div className="row gy-4">
+      <div className="flex justify-center">
+        <div className="flex flex-wrap gap-y-4 justify-center max-w-7xl">
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="col-xl-3 col-md-6 d-flex"
+              className="w-full md:w-1/2 xl:w-1/4 flex justify-center"
               data-aos="fade-up"
               data-aos-delay={(index + 1) * 100}
             >
-              <div className="member">
-                <div className="w-64 h-64 overflow-hidden rounded-lg">
+              <div className="member text-center">
+                <div className="w-64 h-64 overflow-hidden rounded-lg mx-auto">
                   <Image
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h4>{member.name}</h4>
-                <div className="social">
+                <h4 className="mt-4 font-semibold">{member.name}</h4>
+                <div className="social mt-2 flex justify-center gap-3">
                   {Object.entries(member.socialLinks).map(
                     ([platform, link], idx) => (
                       <a
