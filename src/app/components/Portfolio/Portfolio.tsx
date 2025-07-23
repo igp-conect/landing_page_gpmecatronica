@@ -49,14 +49,13 @@ export const Portfolio = () => {
         </ul>
 
         <div
-          className="row gy-4 portfolio-container"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-6"
           data-aos="fade-up"
           data-aos-delay={200}
         >
           <AnimatePresence>
             {filteredItems.map((props, index) => (
               <motion.div
-                className="col-md-6"
                 key={props.title + index}
                 layout
                 initial={{ opacity: 0, scale: 0.95 }}
