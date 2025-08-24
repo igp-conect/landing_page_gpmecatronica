@@ -17,8 +17,12 @@ export const Portfolio = () => {
     activeFilter === "*"
       ? researchProjects
       : researchProjects.filter((item) =>
-          item.tags.some((tag) => tag.toLowerCase() == activeFilter),
+          item.tags.some((tag) => tag.toLowerCase() === activeFilter),
         );
+
+  const handleFilterClick = (filter: string) => {
+    setActiveFilter(filter);
+  };
 
   return (
     <section id="portfolio" className="portfolio section">
@@ -37,13 +41,15 @@ export const Portfolio = () => {
           data-aos-delay={100}
         >
           {filters.map((filter) => (
-            <li
-              key={filter.value}
-              className={filter.value === activeFilter ? "filter-active" : ""}
-              onClick={() => setActiveFilter(filter.value)}
-              style={{ cursor: "pointer" }}
-            >
-              {filter.label}
+            <li key={filter.value}>
+              <button
+                type="button"
+                className={filter.value === activeFilter ? "filter-active" : ""}
+                onClick={() => handleFilterClick(filter.value)}
+                style={{ cursor: "pointer" }}
+              >
+                {filter.label}
+              </button>
             </li>
           ))}
         </ul>
@@ -54,9 +60,9 @@ export const Portfolio = () => {
           data-aos-delay={200}
         >
           <AnimatePresence>
-            {filteredItems.map((props, index) => (
+            {filteredItems.map((props) => (
               <motion.div
-                key={props.title + index}
+                key={props.title}
                 layout
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}

@@ -44,7 +44,7 @@ export function RecentPosts() {
         <div className="row gy-4">
           {posts.map((post, index) => (
             <div
-              key={index}
+              key={post.title}
               className="col-xl-4 col-md-6"
               data-aos="fade-up"
               data-aos-delay={(index + 1) * 100}

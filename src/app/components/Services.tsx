@@ -34,7 +34,7 @@ export function Services() {
         <div className="row gy-4">
           {services.map((service, index) => (
             <div
-              key={index}
+              key={service.title}
               className="col-lg-4 col-md-6"
               data-aos="fade-up"
               data-aos-delay={(index + 1) * 100}

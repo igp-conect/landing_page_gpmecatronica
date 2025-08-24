@@ -23,21 +23,24 @@ export function CallToAction() {
         >
           <div className="col-xl-10">
             <div className="text-center">
-              <a
+              <button
+                type="button"
                 className="play-btn"
                 onClick={(e) =>
                   openGlightboxVideo(e, GalleryName.PresentationVideo)
                 }
-              />
+              >
+                <span className="sr-only">Assistir vídeo de apresentação</span>
+              </button>
               <h3>Junte-se ao GPMecatrônica</h3>
               <p>
                 Faça parte do Grupo de Pesquisa GPMecatrônica do IFRO, onde
                 exploramos soluções inovadoras em robótica, mecatrônica e
                 tecnologia da informação para transformar o futuro.
               </p>
-              <a className="cta-btn" href="#">
+              <button type="button" className="cta-btn">
                 Saiba mais
-              </a>
+              </button>
             </div>
           </div>
         </div>

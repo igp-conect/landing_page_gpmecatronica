@@ -54,7 +54,7 @@ export function Contact() {
             <div className="info-container d-flex flex-column align-items-center">
               {infoItems.map((item, index) => (
                 <InfoItem
-                  key={index}
+                  key={item.title}
                   icon={`bi ${item.icon}`}
                   title={item.title}
                   content={item.content}

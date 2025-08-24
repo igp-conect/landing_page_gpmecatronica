@@ -54,8 +54,8 @@ export const About = () => {
                 pesquisa aplicada.&quot;
               </p>
               <ul>
-                {aboutPhrases.map((phrase, index) => (
-                  <li key={index}>
+                {aboutPhrases.map((phrase) => (
+                  <li key={phrase}>
                     <i className="bi bi-check-circle-fill" />{" "}
                     <span>{phrase}</span>
                   </li>
@@ -73,12 +73,17 @@ export const About = () => {
                   className="img-fluid rounded-4"
                   alt="Imagem de projeto do GPMecatrônica"
                 />
-                <a
+                <button
+                  type="button"
                   onClick={(e) =>
                     openGlightboxVideo(e, GalleryName.PresentationVideo)
                   }
                   className="pulsating-play-btn"
-                />
+                >
+                  <span className="sr-only">
+                    Assistir vídeo de apresentação
+                  </span>
+                </button>
               </div>
             </div>
           </div>

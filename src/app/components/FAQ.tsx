@@ -47,9 +47,12 @@ export function FAQ() {
           <div className="col-lg-8" data-aos="fade-up" data-aos-delay={200}>
             <div className="faq-container">
               {faqItems.map((faq, index) => (
-                <div
-                  key={index}
-                  className={`faq-item ${activeIndex === index ? "faq-active" : ""}`}
+                <button
+                  type="button"
+                  key={faq.question}
+                  className={`faq-item ${
+                    activeIndex === index ? "faq-active" : ""
+                  }`}
                   onClick={() => toggleFAQ(index)}
                 >
                   <h3>
@@ -60,7 +63,7 @@ export function FAQ() {
                     <p>{faq.answer}</p>
                   </div>
                   <i className="faq-toggle bi bi-chevron-right" />
-                </div>
+                </button>
               ))}
             </div>
           </div>

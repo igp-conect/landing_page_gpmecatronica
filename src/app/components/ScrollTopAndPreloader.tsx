@@ -3,7 +3,7 @@ export function ScrollTopAndPreloader() {
     <>
       {/* Scroll Top */}
       <a
-        href="#"
+        href="#hero"
         id="scroll-top"
         className="scroll-top d-flex align-items-center justify-content-center"
       >

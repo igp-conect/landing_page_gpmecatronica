@@ -5,19 +5,19 @@ export function Footer() {
     {
       title: "Links Úteis",
       links: [
-        { label: "Início", href: "#" },
-        { label: "Sobre nós", href: "#" },
-        { label: "Serviços", href: "#" },
-        { label: "Termos de serviço", href: "#" },
-        { label: "Política de privacidade", href: "#" },
+        { label: "Início", href: "/#" },
+        { label: "Sobre nós", href: "/#" },
+        { label: "Serviços", href: "/#" },
+        { label: "Termos de serviço", href: "/#" },
+        { label: "Política de privacidade", href: "/#" },
       ],
     },
     {
       title: "Nossos Serviços",
       links: [
-        { label: "Projetos de Automação", href: "#" },
-        { label: "Desenvolvimento de Sistemas", href: "#" },
-        { label: "Gestão de Projetos", href: "#" },
+        { label: "Projetos de Automação", href: "/#" },
+        { label: "Desenvolvimento de Sistemas", href: "/#" },
+        { label: "Gestão de Projetos", href: "/#" },
       ],
     },
   ];
@@ -35,7 +35,7 @@ export function Footer() {
       <div className="container footer-top">
         <div className="row gy-4">
           <div className="col-lg-5 col-md-12 footer-about">
-            <a href="index.html" className="logo d-flex align-items-center">
+            <a href="/" className="logo d-flex align-items-center">
               <span className="sitename">GPMecatrônica</span>
             </a>
             <p>
@@ -46,7 +46,7 @@ export function Footer() {
             <div className="social-links d-flex mt-4">
               {["twitter-x", "facebook", "instagram", "linkedin"].map(
                 (icon) => (
-                  <a href="" key={icon}>
+                  <a href="/#" key={icon}>
                     <i className={`bi bi-${icon}`} />
                   </a>
                 ),

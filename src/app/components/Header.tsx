@@ -64,7 +64,7 @@ export const PageHeader = () => (
       <div className="container d-flex justify-content-center justify-content-md-between">
         <div className="contact-info d-flex align-items-center">
           <i className="bi bi-envelope d-flex align-items-center">
-            <a href="mailto:contact@example.com">{CONFIG.contactEmail}</a>
+            <a href={`mailto:${CONFIG.contactEmail}`}>{CONFIG.contactEmail}</a>
           </i>
           <i className="bi bi-phone d-flex align-items-center ms-4">
             <span>{CONFIG.phoneNumber}</span>
@@ -74,7 +74,7 @@ export const PageHeader = () => (
           {["facebook", "instagram"].map((socialMediaIconName) => (
             <a
               key={socialMediaIconName}
-              href="#"
+              href="/#"
               className={socialMediaIconName}
             >
               <i className={`bi bi-${socialMediaIconName}`} />
@@ -87,7 +87,7 @@ export const PageHeader = () => (
     {/* End Top Bar */}
     <div className="branding d-flex align-items-center">
       <div className="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" className="logo d-flex align-items-center">
+        <a href="/" className="logo d-flex align-items-center">
           <Image src={logoImage} alt="" width={32} />
           <h1 className="sitename">GPMecatrônica</h1>
           <span>.</span>

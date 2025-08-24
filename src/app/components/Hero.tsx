@@ -16,9 +16,9 @@ const HighlightIconBox = ({ title, iconName }: IconBoxProps) => (
         <i className={`bi bi-${iconName}`} />
       </div>
       <h4 className="title">
-        <a href="#" className="stretched-link">
+        <div>
           {title}
-        </a>
+        </div>
       </h4>
     </div>
   </div>

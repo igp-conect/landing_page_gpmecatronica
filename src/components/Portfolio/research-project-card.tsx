@@ -47,9 +47,9 @@ export function ResearchProjectCard({
             </div>
 
             <div className="flex flex-wrap gap-1">
-              {tags.map((tag, index) => (
+              {tags.map((tag) => (
                 <Badge
-                  key={index}
+                  key={tag}
                   variant="secondary"
                   className="text-xs whitespace-nowrap"
                 >
