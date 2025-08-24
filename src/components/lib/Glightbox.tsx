@@ -19,7 +19,7 @@ export enum GalleryName {
 }
 
 export function openGlightboxVideo(
-  e: MouseEvent<HTMLAnchorElement>,
+  e: MouseEvent<HTMLAnchorElement | HTMLButtonElement>,
   galleryName: GalleryName,
 ) {
   e.preventDefault();
