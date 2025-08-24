@@ -33,35 +33,35 @@ export function RecentPosts() {
 
   return (
     <section id="recent-posts" className="recent-posts section">
-      <div className="container section-title" data-aos="fade-up">
+      <div className="container mx-auto sm:px-4 section-title" data-aos="fade-up">
         <h2>Últimos Artigos</h2>
         <p>
           Confira os artigos mais recentes publicados pelos membros do
           GPMecatrônica, abordando temas inovadores em tecnologia e pesquisa.
         </p>
       </div>
-      <div className="container">
-        <div className="row gy-4">
+      <div className="container mx-auto sm:px-4">
+        <div className="flex flex-wrap  gy-4">
           {posts.map((post, index) => (
             <div
               key={post.title}
-              className="col-xl-4 col-md-6"
+              className="xl:w-1/3 pr-4 pl-4 md:w-1/2 pr-4 pl-4"
               data-aos="fade-up"
               data-aos-delay={(index + 1) * 100}
             >
               <article>
                 <div className="post-img">
-                  <Image src={post.imgSrc} alt="" className="img-fluid" />
+                  <Image src={post.imgSrc} alt="" className="max-w-full h-auto" />
                 </div>
                 <p className="post-category">{post.category}</p>
                 <h2 className="title">
                   <a href={post.link}>{post.title}</a>
                 </h2>
-                <div className="d-flex align-items-center">
+                <div className="flex items-center">
                   <Image
                     src={post.authorImg}
                     alt=""
-                    className="img-fluid post-author-img flex-shrink-0"
+                    className="max-w-full h-auto post-author-img flex-shrink-0"
                   />
                   <div className="post-meta">
                     <p className="post-author">{post.authorName}</p>

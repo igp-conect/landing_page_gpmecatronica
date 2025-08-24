@@ -26,7 +26,7 @@ export const Portfolio = () => {
 
   return (
     <section id="portfolio" className="portfolio section">
-      <div className="container section-title" data-aos="fade-up">
+      <div className="container mx-auto sm:px-4 section-title" data-aos="fade-up">
         <h2>Conheça alguns dos nossos projetos de pesquisa</h2>
         <p>
           Explore nossos projetos de pesquisa e saiba um pouco do que está
@@ -34,7 +34,7 @@ export const Portfolio = () => {
         </p>
       </div>
 
-      <div className="container">
+      <div className="container mx-auto sm:px-4">
         <ul
           className="portfolio-filters"
           data-aos="fade-up"

@@ -10,7 +10,6 @@
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
     "aos": "^2.3.4",
-    "bootstrap": "^5.3.7",
     "bootstrap-icons": "^1.13.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

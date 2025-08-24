@@ -52,7 +52,7 @@ function PlatformIcon({ socialNetwork }: { socialNetwork: SocialNetwork }) {
           width="448"
           height="512"
           viewBox="0 0 448 512"
-          className="w-6 h-6"
+          className="w-6 mb-2 font-medium leading-tight text-base"
         >
           <title>Lattes</title>
           <path
@@ -122,7 +122,7 @@ export function Team() {
 
   return (
     <section id="team" className="team section">
-      <div className="container section-title" data-aos="fade-up">
+      <div className="container mx-auto sm:px-4 section-title" data-aos="fade-up">
         <h2>Professores Orientadores</h2>
         <p>
           Conheça os professores orientadores do GPMecatrônica que estão

@@ -14,7 +14,7 @@ export const About = () => {
 
   return (
     <section id="about" className="about section">
-      <div className="container section-title" data-aos="fade-up">
+      <div className="container mx-auto sm:px-4 section-title" data-aos="fade-up">
         <h2>
           Sobre Nós
           <br />
@@ -25,13 +25,13 @@ export const About = () => {
         </p>
       </div>
       {/* End Section Title */}
-      <div className="container">
-        <div className="row gy-4">
-          <div className="col-lg-6" data-aos="fade-up" data-aos-delay={100}>
+      <div className="container mx-auto sm:px-4">
+        <div className="flex flex-wrap  gy-4">
+          <div className="lg:w-1/2 pr-4 pl-4" data-aos="fade-up" data-aos-delay={100}>
             <h3>Promovendo inovação e excelência em Mecatrônica</h3>
             <Image
               src={aboutImage}
-              className="img-fluid rounded-4 mb-4"
+              className="max-w-full h-auto rounded-4 mb-4"
               alt="Imagem sobre o GPMecatrônica"
             />
             <p>
@@ -47,8 +47,8 @@ export const About = () => {
               impacto positivo em nossos resultados.
             </p>
           </div>
-          <div className="col-lg-6" data-aos="fade-up" data-aos-delay={250}>
-            <div className="content ps-0 ps-lg-5">
+          <div className="lg:w-1/2 pr-4 pl-4" data-aos="fade-up" data-aos-delay={250}>
+            <div className="content ps-0 lg:ps-12">
               <p className="fst-italic">
                 &quot;Transformando ideias em realidade através da inovação e
                 pesquisa aplicada.&quot;
@@ -67,10 +67,10 @@ export const About = () => {
                 conhecimento, promover a inovação e contribuir para o
                 desenvolvimento sustentável.
               </p>
-              <div className="position-relative mt-4">
+              <div className="relative mt-4">
                 <Image
                   src={aboutSecondaryImage}
-                  className="img-fluid rounded-4"
+                  className="max-w-full h-auto rounded-4"
                   alt="Imagem de projeto do GPMecatrônica"
                 />
                 <button

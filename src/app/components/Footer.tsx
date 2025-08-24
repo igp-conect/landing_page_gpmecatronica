@@ -32,10 +32,10 @@ export function Footer() {
 
   return (
     <footer id="footer" className="footer accent-background">
-      <div className="container footer-top">
-        <div className="row gy-4">
-          <div className="col-lg-5 col-md-12 footer-about">
-            <a href="/" className="logo d-flex align-items-center">
+      <div className="container mx-auto sm:px-4 footer-top">
+        <div className="flex flex-wrap  gy-4">
+          <div className="lg:w-2/5 pr-4 pl-4 md:w-full pr-4 pl-4 footer-about">
+            <a href="/" className="logo flex items-center">
               <span className="sitename">GPMecatrônica</span>
             </a>
             <p>
@@ -43,7 +43,7 @@ export function Footer() {
               desenvolvimento de soluções inovadoras em automação e tecnologia,
               promovendo a integração de conhecimento técnico e científico.
             </p>
-            <div className="social-links d-flex mt-4">
+            <div className="social-links flex mt-4">
               {["twitter-x", "facebook", "instagram", "linkedin"].map(
                 (icon) => (
                   <a href="/#" key={icon}>
@@ -54,7 +54,7 @@ export function Footer() {
             </div>
           </div>
           {footerLinks.map(({ title, links }) => (
-            <div className="col-lg-2 col-6 footer-links" key={title}>
+            <div className="lg:w-1/5 pr-4 pl-4 w-1/2 footer-links" key={title}>
               <h4>{title}</h4>
               <ul>
                 {links.map(({ label, href }) => (
@@ -65,7 +65,7 @@ export function Footer() {
               </ul>
             </div>
           ))}
-          <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <div className="lg:w-1/4 pr-4 pl-4 md:w-full pr-4 pl-4 footer-contact text-center text-md-start">
             <h4>Entre em Contato</h4>
             <p>{contactInfo.address}</p>
             <p>{contactInfo.city}</p>
@@ -79,7 +79,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="container copyright text-center mt-4">
+      <div className="container mx-auto sm:px-4 copyright text-center mt-4">
         <p>
           © <span>Copyright</span>{" "}
           <strong className="px-1 sitename">GPMecatrônica</strong>{" "}

@@ -9,7 +9,7 @@ export function CallToAction() {
       id="call-to-action"
       className="call-to-action section dark-background"
     >
-      <div className="container">
+      <div className="container mx-auto sm:px-4">
         <Image
           src="https://portal.ifro.edu.br/images/Jornalismo/Jornalismo-2025/03-Marco-2025/18-03/Ifro_Calama.jpeg"
           alt="Imagem aérea do IFRO Campus Porto Velho Calama"
@@ -17,11 +17,11 @@ export function CallToAction() {
           height={900}
         />
         <div
-          className="content row justify-content-center"
+          className="content flex flex-wrap  justify-center"
           data-aos="zoom-in"
           data-aos-delay={100}
         >
-          <div className="col-xl-10">
+          <div className="xl:w-4/5 pr-4 pl-4">
             <div className="text-center">
               <button
                 type="button"

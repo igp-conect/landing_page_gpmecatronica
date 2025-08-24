@@ -1,5 +1,4 @@
 import "../../public/assets/css/main.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "aos/dist/aos.css";
 import "aos/dist/aos.js";
