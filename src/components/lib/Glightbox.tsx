@@ -1,6 +1,6 @@
 "use client";
 
-import { MouseEvent, useEffect } from "react";
+import { type MouseEvent, useEffect } from "react";
 
 export function GLightboxInjector() {
   useEffect(() => {

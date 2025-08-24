@@ -16,8 +16,9 @@
         { pkgs, ... }:
         {
           devShells.default = pkgs.mkShell {
-            packages = [
-              pkgs.nodejs
+            packages = with pkgs; [
+              nodejs
+              biome
             ];
           };
         };

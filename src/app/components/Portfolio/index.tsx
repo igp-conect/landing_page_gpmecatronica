@@ -1,4 +1,4 @@
-import { ResearchProjectCardProps } from "@/components/Portfolio/research-project-card";
+import type { ResearchProjectCardProps } from "@/components/Portfolio/research-project-card";
 
 export const researchProjects: ResearchProjectCardProps[] = [
   {
