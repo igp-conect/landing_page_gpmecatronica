@@ -5,7 +5,7 @@
 //   dropdownTitle: string;
 //   dropdownItems: string[];
 // }) => (
-//   <li className="relative">
+//   <li className="dropdown">
 //     <a href="#">
 //       <span>{dropdownTitle}</span>{" "}
 //       <i className="bi bi-chevron-down toggle-dropdown" />
@@ -54,23 +54,23 @@ const NavMenu = () => (
         />
       ))}
     </ul>
-    <i className="mobile-nav-toggle xl:hidden bi bi-list" />
+    <i className="mobile-nav-toggle d-xl-none bi bi-list" />
   </nav>
 );
 
 export const PageHeader = () => (
-  <header id="header" className="header top-0">
-    <div className="topbar flex items-center">
-      <div className="container mx-auto sm:px-4 flex justify-center md:justify-between">
-        <div className="contact-info flex items-center">
-          <i className="bi bi-envelope flex items-center">
+  <header id="header" className="header fixed-top">
+    <div className="topbar d-flex align-items-center">
+      <div className="container d-flex justify-content-center justify-content-md-between">
+        <div className="contact-info d-flex align-items-center">
+          <i className="bi bi-envelope d-flex align-items-center">
             <a href={`mailto:${CONFIG.contactEmail}`}>{CONFIG.contactEmail}</a>
           </i>
-          <i className="bi bi-phone flex items-center ms-4">
+          <i className="bi bi-phone d-flex align-items-center ms-4">
             <span>{CONFIG.phoneNumber}</span>
           </i>
         </div>
-        <div className="social-links hidden md:flex items-center">
+        <div className="social-links d-none d-md-flex align-items-center">
           {["facebook", "instagram"].map((socialMediaIconName) => (
             <a
               key={socialMediaIconName}
@@ -85,9 +85,9 @@ export const PageHeader = () => (
     </div>
 
     {/* End Top Bar */}
-    <div className="branding flex items-center">
-      <div className="container mx-auto sm:px-4 relative flex items-center justify-between">
-        <a href="/" className="logo flex items-center">
+    <div className="branding d-flex align-items-center">
+      <div className="container position-relative d-flex align-items-center justify-content-between">
+        <a href="/" className="logo d-flex align-items-center">
           <Image src={logoImage} alt="" width={32} />
           <h1 className="sitename">GPMecatrônica</h1>
           <span>.</span>

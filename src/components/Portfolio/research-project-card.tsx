@@ -42,7 +42,7 @@ export function ResearchProjectCard({
             </h3>
 
             <div className="flex items-center gap-1 text-sm text-muted-foreground flex-wrap">
-              <Users className="w-4 mb-2 font-medium leading-tight text-xl" />
+              <Users className="w-4 h-4" />
               <span className="break-words">{leaders.join(", ")}</span>
             </div>
 

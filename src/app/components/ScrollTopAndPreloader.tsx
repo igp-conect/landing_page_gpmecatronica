@@ -5,7 +5,7 @@ export function ScrollTopAndPreloader() {
       <a
         href="#hero"
         id="scroll-top"
-        className="scroll-top flex items-center justify-center"
+        className="scroll-top d-flex align-items-center justify-content-center"
       >
         <i className="bi bi-arrow-up-short" />
       </a>

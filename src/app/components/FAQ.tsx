@@ -29,10 +29,10 @@ export function FAQ() {
 
   return (
     <section id="faq" className="faq section">
-      <div className="container mx-auto sm:px-4">
-        <div className="flex flex-wrap  gy-4">
-          <div className="lg:w-1/3 pr-4 pl-4" data-aos="fade-up" data-aos-delay={100}>
-            <div className="content xl:px-12">
+      <div className="container">
+        <div className="row gy-4">
+          <div className="col-lg-4" data-aos="fade-up" data-aos-delay={100}>
+            <div className="content px-xl-5">
               <h3>
                 <span>Perguntas Frequentes </span>
                 <strong>FAQ</strong>
@@ -44,7 +44,7 @@ export function FAQ() {
               </p>
             </div>
           </div>
-          <div className="lg:w-2/3 pr-4 pl-4" data-aos="fade-up" data-aos-delay={200}>
+          <div className="col-lg-8" data-aos="fade-up" data-aos-delay={200}>
             <div className="faq-container">
               {faqItems.map((faq, index) => (
                 <button

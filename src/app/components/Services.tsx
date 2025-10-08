@@ -22,7 +22,7 @@ export function Services() {
 
   return (
     <section id="services" className="services section">
-      <div className="container mx-auto sm:px-4 section-title" data-aos="fade-up">
+      <div className="container section-title" data-aos="fade-up">
         <h2>Nossos Serviços</h2>
         <p>
           Descubra as soluções do GPMecatrônica em robótica, mecatrônica e
@@ -30,16 +30,16 @@ export function Services() {
           tecnológico.
         </p>
       </div>
-      <div className="container mx-auto sm:px-4">
-        <div className="flex flex-wrap  gy-4">
+      <div className="container">
+        <div className="row gy-4">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="lg:w-1/3 pr-4 pl-4 md:w-1/2 pr-4 pl-4"
+              className="col-lg-4 col-md-6"
               data-aos="fade-up"
               data-aos-delay={(index + 1) * 100}
             >
-              <div className="service-item relative">
+              <div className="service-item position-relative">
                 <div className="icon">
                   <i className={service.icon} />
                 </div>
