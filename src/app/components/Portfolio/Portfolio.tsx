@@ -55,7 +55,7 @@ export const Portfolio = () => {
         </ul>
 
         <div
-          className="tw:w-full tw:grid tw:grid-cols-1 lg:tw:grid-cols-3 tw:gap-6"
+          className="tw:w-full tw:grid tw:grid-cols-1 tw:md:grid-cols-2 tw:lg:grid-cols-3 tw:gap-6"
           data-aos="fade-up"
           data-aos-delay={200}
         >

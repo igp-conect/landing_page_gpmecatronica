@@ -50,12 +50,12 @@ function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 php-email-form"
+        className="tw:space-y-8 php-email-form"
         data-aos="fade"
         data-aos-delay={100}
       >
-        <div className="flex flex-wrap -mx-4">
-          <div className="w-full md:w-1/2 px-4 mb-4">
+        <div className="tw:flex tw:flex-wrap tw:-mx-4">
+          <div className="tw:w-full md:tw:w-1/2 tw:px-4 tw:mb-4">
             <FormField
               control={form.control}
               name="name"
@@ -70,7 +70,7 @@ function ContactForm() {
               )}
             />
           </div>
-          <div className="w-full md:w-1/2 px-4 mb-4">
+          <div className="tw:w-full md:tw:w-1/2 tw:px-4 tw:mb-4">
             <FormField
               control={form.control}
               name="email"
@@ -108,7 +108,7 @@ function ContactForm() {
               <FormControl>
                 <Textarea
                   placeholder="Digite sua mensagem aqui..."
-                  className="resize-none"
+                  className="tw:resize-none"
                   {...field}
                 />
               </FormControl>
@@ -116,7 +116,7 @@ function ContactForm() {
             </FormItem>
           )}
         />
-        <div className="text-center">
+        <div className="tw:text-center">
           <Button type="submit">Enviar Mensagem</Button>
         </div>
       </form>
@@ -154,8 +154,12 @@ export function Contact() {
     content: string;
     delay: number;
   }) => (
-    <div className="info-item flex" data-aos="fade-up" data-aos-delay={delay}>
-      <i className={`${icon} flex-shrink-0`} />
+    <div
+      className="info-item tw:flex"
+      data-aos="fade-up"
+      data-aos-delay={delay}
+    >
+      <i className={`${icon} tw:flex-shrink-0`} />
       <div>
         <h3>{title}</h3>
         <p>{content}</p>
@@ -166,7 +170,7 @@ export function Contact() {
   return (
     <section id="contact" className="contact section">
       <div
-        className="container mx-auto sm:px-4 section-title"
+        className="tw:container tw:mx-auto sm:tw:px-4 section-title"
         data-aos="fade-up"
       >
         <h2>Contato</h2>
@@ -176,13 +180,13 @@ export function Contact() {
         </p>
       </div>
       <div
-        className="container mx-auto sm:px-4"
+        className="tw:container tw:mx-auto sm:tw:px-4"
         data-aos="fade-up"
         data-aos-delay={100}
       >
-        <div className="flex flex-wrap gx-lg-0 gy-4">
-          <div className="lg:w-1/3 pr-4 pl-4">
-            <div className="info-container flex flex-col items-center">
+        <div className="tw:flex tw:flex-wrap gx-lg-0 gy-4">
+          <div className="tw:lg:w-1/3 tw:pr-4 tw:pl-4">
+            <div className="info-container tw:flex tw:flex-col tw:items-center">
               {infoItems.map((item, index) => (
                 <InfoItem
                   key={item.title}
@@ -194,7 +198,7 @@ export function Contact() {
               ))}
             </div>
           </div>
-          <div className="lg:w-2/3 pr-4 pl-4">
+          <div className="tw:lg:w-2/3 tw:pr-4 tw:pl-4">
             <ContactForm />
           </div>
         </div>
