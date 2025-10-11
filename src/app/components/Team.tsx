@@ -52,7 +52,7 @@ function PlatformIcon({ socialNetwork }: { socialNetwork: SocialNetwork }) {
           width="448"
           height="512"
           viewBox="0 0 448 512"
-          className="w-6 h-6"
+          className="tw:w-6 tw:h-6"
         >
           <title>Lattes</title>
           <path
@@ -130,39 +130,36 @@ export function Team() {
           tecnologia.
         </p>
       </div>
-      <div className="flex justify-center">
-        <div className="flex flex-wrap gap-y-4 justify-center max-w-7xl">
+      <div className="tw:flex tw:justify-center">
+        <div className="tw:grid tw:grid-cols-1 tw:md:grid-cols-2 tw:lg:grid-cols-3 tw:2xl:grid-cols-4 tw:gap-4 tw:justify-items-center tw:max-w-7xl">
           {teamMembers.map((member, index) => (
             <div
               key={member.name}
-              className="w-full md:w-1/2 xl:w-1/4 flex justify-center"
               data-aos="fade-up"
               data-aos-delay={(index + 1) * 100}
             >
-              <div className="member text-center">
-                <div className="w-64 h-64 overflow-hidden rounded-lg mx-auto">
+              <div className="member tw:text-center tw:max-w-xs tw:mx-auto tw:flex tw:flex-col tw:h-96">
+                <div className="tw:overflow-hidden tw:rounded-lg">
                   <Image
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    className="tw:w-full tw:h-full tw:object-cover"
                   />
                 </div>
-                <h4 className="mt-4 font-semibold">{member.name}</h4>
-                <div className="social mt-2 flex justify-center gap-3">
-                  {objectEntries(member.socialLinks).map(
-                    ([platform, link]) => {
-                      return (
-                        <a
-                          key={platform}
-                          href={socialLinkToURL(platform, link)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <PlatformIcon socialNetwork={platform} />
-                        </a>
-                      );
-                    },
-                  )}
+                <h4 className="tw:mt-4 tw:font-semibold">{member.name}</h4>
+                <div className="social tw:mt-2 tw:flex tw:justify-center tw:gap-3">
+                  {objectEntries(member.socialLinks).map(([platform, link]) => {
+                    return (
+                      <a
+                        key={platform}
+                        href={socialLinkToURL(platform, link)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <PlatformIcon socialNetwork={platform} />
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
             </div>

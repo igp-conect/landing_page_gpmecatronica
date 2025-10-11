@@ -24,34 +24,34 @@ export function ResearchProjectCard({
   image,
 }: ResearchProjectCardProps) {
   return (
-    <Card className="w-full mx-auto">
-      <CardHeader className="pb-4">
-        <div className="flex flex-col md:flex-row gap-4">
-          <div className="w-full md:w-[300px] flex-shrink-0">
+    <Card className="tw:max-w-xl tw:mx-auto">
+      <CardHeader className="tw:pb-4">
+        <div className="tw:flex tw:flex-col md:tw:flex-row tw:gap-4">
+          <div className="tw:w-full md:tw:w-[300px] tw:flex-shrink-0">
             <Image
               src={image.src}
               alt={image.alt}
               width={300}
               height={200}
-              className="rounded-lg object-cover w-full h-[200px]"
+              className="tw:rounded-lg tw:object-cover tw:w-full tw:h-[200px]"
             />
           </div>
-          <div className="flex-1 min-w-0 space-y-3">
-            <h3 className="text-xl font-semibold leading-tight mb-1 break-words">
+          <div className="tw:flex-1 tw:min-w-0 tw:space-y-3">
+            <h3 className="tw:text-xl tw:font-semibold tw:leading-tight tw:mb-1 tw:break-words">
               {title}
             </h3>
 
-            <div className="flex items-center gap-1 text-sm text-muted-foreground flex-wrap">
-              <Users className="w-4 h-4" />
-              <span className="break-words">{leaders.join(", ")}</span>
+            <div className="tw:flex tw:items-center tw:gap-1 tw:text-sm tw:text-muted-foreground tw:flex-wrap">
+              <Users className="tw:w-4 tw:h-4" />
+              <span className="tw:break-words">{leaders.join(", ")}</span>
             </div>
 
-            <div className="flex flex-wrap gap-1">
+            <div className="tw:flex tw:flex-wrap tw:gap-1">
               {tags.map((tag) => (
                 <Badge
                   key={tag}
                   variant="secondary"
-                  className="text-xs whitespace-nowrap"
+                  className="tw:text-xs tw:whitespace-nowrap"
                 >
                   {tag}
                 </Badge>
@@ -61,8 +61,8 @@ export function ResearchProjectCard({
         </div>
       </CardHeader>
 
-      <CardContent className="pt-0">
-        <p className="text-sm leading-relaxed text-muted-foreground">
+      <CardContent className="tw:pt-0">
+        <p className="tw:text-sm tw:leading-relaxed tw:text-muted-foreground">
           {shortDescription}
         </p>
       </CardContent>

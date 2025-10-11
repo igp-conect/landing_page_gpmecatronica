@@ -55,7 +55,7 @@ export const Portfolio = () => {
         </ul>
 
         <div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+          className="tw:w-full tw:grid tw:grid-cols-1 lg:tw:grid-cols-3 tw:gap-6"
           data-aos="fade-up"
           data-aos-delay={200}
         >
@@ -63,7 +63,6 @@ export const Portfolio = () => {
             {filteredItems.map((props) => (
               <motion.div
                 key={props.title}
-                layout
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}

@@ -29,9 +29,7 @@ export function CallToAction() {
                 onClick={(e) =>
                   openGlightboxVideo(e, GalleryName.PresentationVideo)
                 }
-              >
-                <span className="sr-only">Assistir vídeo de apresentação</span>
-              </button>
+              />
               <h3>Junte-se ao GPMecatrônica</h3>
               <p>
                 Faça parte do Grupo de Pesquisa GPMecatrônica do IFRO, onde
