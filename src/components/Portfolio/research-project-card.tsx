@@ -24,7 +24,7 @@ export function ResearchProjectCard({
   image,
 }: ResearchProjectCardProps) {
   return (
-    <Card className="tw:max-w-xl tw:mx-auto">
+    <Card className=" tw:mx-auto">
       <CardHeader className="tw:pb-4">
         <div className="tw:flex tw:flex-col md:tw:flex-row tw:gap-4">
           <div className="tw:w-full md:tw:w-[300px] tw:flex-shrink-0">

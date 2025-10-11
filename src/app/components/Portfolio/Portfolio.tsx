@@ -4,6 +4,7 @@ import { useState } from "react";
 import { researchProjects } from ".";
 import { AnimatePresence, motion } from "framer-motion";
 import { ResearchProjectCard } from "@/components/Portfolio/research-project-card";
+import clsx from "clsx";
 
 const filters = [
   { label: "Todos", value: "*" },
@@ -44,7 +45,10 @@ export const Portfolio = () => {
             <li key={filter.value}>
               <button
                 type="button"
-                className={filter.value === activeFilter ? "filter-active" : ""}
+                className={clsx("tw:transition-colors", {
+                  "tw:text-primary": filter.value === activeFilter,
+                  "hover:tw:text-primary": filter.value !== activeFilter,
+                })}
                 onClick={() => handleFilterClick(filter.value)}
                 style={{ cursor: "pointer" }}
               >
