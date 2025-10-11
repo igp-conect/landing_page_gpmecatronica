@@ -1,5 +1,3 @@
-"use client";
-
 import { Users } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -24,19 +22,19 @@ export function ResearchProjectCard({
   image,
 }: ResearchProjectCardProps) {
   return (
-    <Card className=" tw:mx-auto">
-      <CardHeader className="tw:pb-4">
-        <div className="tw:flex tw:flex-col md:tw:flex-row tw:gap-4">
-          <div className="tw:w-full md:tw:w-[300px] tw:flex-shrink-0">
+    <Card className="tw:w-full tw:mx-auto">
+      <CardHeader>
+        <div className="tw:flex tw:gap-4">
+          <div className="tw:w-48 tw:h-48 tw:flex-shrink-0">
             <Image
               src={image.src}
               alt={image.alt}
-              width={300}
-              height={200}
-              className="tw:rounded-lg tw:object-cover tw:w-full tw:h-[200px]"
+              width={192}
+              height={192}
+              className="tw:rounded-sm tw:object-cover tw:w-full tw:h-full"
             />
           </div>
-          <div className="tw:flex-1 tw:min-w-0 tw:space-y-3">
+          <div className="tw:flex-1 tw:min-w-0 tw:space-y-2">
             <h3 className="tw:text-xl tw:font-semibold tw:leading-tight tw:mb-1 tw:break-words">
               {title}
             </h3>
