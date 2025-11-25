@@ -137,29 +137,34 @@ export function Team() {
               key={member.name}
               data-aos="fade-up"
               data-aos-delay={(index + 1) * 100}
+              className="tw:w-full tw:max-w-xs"
             >
-              <div className="member tw:text-center tw:mx-auto tw:flex tw:flex-col tw:h-96 tw:w-full">
-                <div className="tw:overflow-hidden tw:rounded-lg">
+              <div className="member tw:text-center tw:flex tw:flex-col tw:h-[420px] tw:w-full tw:rounded-xl tw:p-2 tw:shadow-md tw:bg-white">
+                <div className="tw:overflow-hidden tw:rounded-lg tw:h-48 tw:w-full">
                   <Image
                     src={member.image}
                     alt={member.name}
                     className="tw:w-full tw:h-full tw:object-cover"
                   />
                 </div>
-                <h4 className="tw:mt-4 tw:font-semibold">{member.name}</h4>
-                <div className="social tw:mt-2 tw:flex tw:justify-center tw:gap-3">
-                  {objectEntries(member.socialLinks).map(([platform, link]) => {
-                    return (
-                      <a
-                        key={platform}
-                        href={socialLinkToURL(platform, link)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <PlatformIcon socialNetwork={platform} />
-                      </a>
-                    );
-                  })}
+                <h4 className="tw:mt-4 tw:font-semibold tw:px-2 tw:leading-tight">
+                  {member.name}
+                </h4>
+                <div className="tw:mt-auto tw:pb-4">
+                  <div className="social tw:mt-2 tw:flex tw:justify-center tw:gap-3">
+                    {objectEntries(member.socialLinks).map(
+                      ([platform, link]) => (
+                        <a
+                          key={platform}
+                          href={socialLinkToURL(platform, link)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <PlatformIcon socialNetwork={platform} />
+                        </a>
+                      ),
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
