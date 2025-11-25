@@ -16,9 +16,7 @@ const HighlightIconBox = ({ title, iconName }: IconBoxProps) => (
         <i className={`bi bi-${iconName}`} />
       </div>
       <h4 className="title">
-        <div>
-          {title}
-        </div>
+        <div>{title}</div>
       </h4>
     </div>
   </div>
@@ -28,14 +26,14 @@ export const Hero = () => {
   return (
     <section id="hero" className="hero section accent-background">
       <div
-        className="container position-relative"
+        className="container position-relative tw:mt-2"
         data-aos="fade-up"
         data-aos-delay={100}
       >
         <div className="row gy-5 justify-content-between">
           <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
             <h2>
-              <span>Bem-vindo ao </span>
+              <span>Conheça o </span>
               <span className="accent">GPMecatrônica</span>
             </h2>
             <p>

@@ -22,6 +22,7 @@
 
 import Image from "next/image";
 import logoImage from "@assets/img/logo.png";
+import simplelogoImage from "@assets/img/simplelogo.png";
 import { CONFIG } from "../configuration";
 
 const NavItem = ({
@@ -87,11 +88,20 @@ export const PageHeader = () => (
     {/* End Top Bar */}
     <div className="branding d-flex align-items-center">
       <div className="container position-relative d-flex align-items-center justify-content-between">
-        <a href="/" className="logo d-flex align-items-center">
-          <Image src={logoImage} alt="" width={32} />
-          <h1 className="sitename">GPMecatrônica</h1>
-          <span>.</span>
-        </a>
+        <div className="tw:bg-emerald-200 tw:p-1 tw:rounded-md">
+          <Image
+            src={logoImage}
+            alt="Logo do GPMecatrônica"
+            width={196}
+            className="tw:hidden tw:md:block"
+          />
+          <Image
+            src={simplelogoImage}
+            alt="Logo do GPMecatrônica Simples"
+            width={64}
+            className="tw:block tw:md:hidden"
+          />
+        </div>
 
         <NavMenu />
       </div>

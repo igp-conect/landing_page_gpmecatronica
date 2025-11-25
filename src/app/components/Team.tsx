@@ -138,7 +138,7 @@ export function Team() {
               data-aos="fade-up"
               data-aos-delay={(index + 1) * 100}
             >
-              <div className="member tw:text-center tw:max-w-xs tw:mx-auto tw:flex tw:flex-col tw:h-96">
+              <div className="member tw:text-center tw:mx-auto tw:flex tw:flex-col tw:h-96 tw:w-full">
                 <div className="tw:overflow-hidden tw:rounded-lg">
                   <Image
                     src={member.image}
