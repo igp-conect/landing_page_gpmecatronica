@@ -24,8 +24,8 @@ export function ResearchProjectCard({
   return (
     <Card className="tw:w-full tw:mx-auto">
       <CardHeader>
-        <div className="tw:flex tw:gap-4">
-          <div className="tw:w-48 tw:h-48 tw:flex-shrink-0">
+        <div className="tw:flex tw:flex-col tw:sm:flex-row tw:gap-4">
+          <div className="tw:hidden tw:sm:flex tw:sm:w-48 tw:sm:h-48 tw:flex-shrink-0">
             <Image
               src={image.src}
               alt={image.alt}
