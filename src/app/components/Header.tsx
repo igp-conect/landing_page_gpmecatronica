@@ -61,7 +61,7 @@ const NavMenu = () => (
 
 export const PageHeader = () => (
   <header id="header" className="header fixed-top">
-    <div className="topbar d-flex align-items-center">
+    <div className="topbar d-none d-md-flex align-items-center">
       <div className="container d-flex justify-content-center justify-content-md-between">
         <div className="contact-info d-flex align-items-center">
           <i className="bi bi-envelope d-flex align-items-center">
@@ -100,7 +100,7 @@ export const PageHeader = () => (
           <Image
             src={simplelogoImage}
             alt="Logo do GPMecatrônica Simples"
-            width={64}
+            width={48}
             className="tw:block tw:md:hidden"
           />
         </div>
