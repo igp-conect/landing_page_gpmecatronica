@@ -90,7 +90,7 @@ export const PageHeader = () => (
     {/* End Top Bar */}
     <div className="branding d-flex align-items-center">
       <div className="container position-relative d-flex align-items-center justify-content-between">
-        <div className="tw:bg-emerald-200 tw:p-0.5 tw:rounded-md">
+        <div className="tw:bg-emerald-200 tw:p-0.5 tw:rounded-sm">
           <Image
             src={logoImage}
             alt="Logo do GPMecatrônica"
