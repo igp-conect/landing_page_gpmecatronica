@@ -127,11 +127,6 @@ function ContactForm() {
 export function Contact() {
   const infoItems = [
     {
-      icon: "bi-telephone",
-      title: "Ligue Para Nós",
-      content: CONFIG.phoneNumber,
-    },
-    {
       icon: "bi-envelope",
       title: "Envie-nos um Email",
       content: CONFIG.contactEmail,

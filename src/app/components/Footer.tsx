@@ -26,7 +26,6 @@ export function Footer() {
     address: "Instituto Federal de Rondônia (IFRO)",
     city: "Campus Calama, RO",
     country: "Brasil",
-    phone: CONFIG.phoneNumber,
     email: CONFIG.contactEmail,
   };
 
@@ -70,9 +69,6 @@ export function Footer() {
             <p>{contactInfo.address}</p>
             <p>{contactInfo.city}</p>
             <p>{contactInfo.country}</p>
-            <p className="mt-4">
-              <strong>Telefone:</strong> <span>{contactInfo.phone}</span>
-            </p>
             <p>
               <strong>Email:</strong> <span>{contactInfo.email}</span>
             </p>

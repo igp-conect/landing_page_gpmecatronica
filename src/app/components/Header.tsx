@@ -67,18 +67,20 @@ export const PageHeader = () => (
           <i className="bi bi-envelope d-flex align-items-center">
             <a href={`mailto:${CONFIG.contactEmail}`}>{CONFIG.contactEmail}</a>
           </i>
-          <i className="bi bi-phone d-flex align-items-center ms-4">
-            <span>{CONFIG.phoneNumber}</span>
-          </i>
         </div>
         <div className="social-links d-none d-md-flex align-items-center">
-          {["facebook", "instagram"].map((socialMediaIconName) => (
-            <a
-              key={socialMediaIconName}
-              href="/#"
-              className={socialMediaIconName}
-            >
-              <i className={`bi bi-${socialMediaIconName}`} />
+          {[
+            {
+              socialMedia: "facebook",
+              href: "https://www.facebook.com/gpmecatronica",
+            },
+            {
+              socialMedia: "instagram",
+              href: "https://www.instagram.com/gpmecatronica/",
+            },
+          ].map(({ socialMedia, href }) => (
+            <a key={socialMedia} href={href} className={socialMedia}>
+              <i className={`bi bi-${socialMedia}`} />
             </a>
           ))}
         </div>
