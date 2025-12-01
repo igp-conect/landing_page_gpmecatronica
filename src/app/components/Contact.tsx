@@ -55,7 +55,7 @@ function ContactForm() {
         data-aos-delay={100}
       >
         <div className="tw:flex tw:flex-wrap tw:-mx-4">
-          <div className="tw:w-full md:tw:w-1/2 tw:px-4 tw:mb-4">
+          <div className="tw:w-full tw:lg:w-1/2 tw:px-4 tw:mb-4">
             <FormField
               control={form.control}
               name="name"
@@ -70,7 +70,7 @@ function ContactForm() {
               )}
             />
           </div>
-          <div className="tw:w-full md:tw:w-1/2 tw:px-4 tw:mb-4">
+          <div className="tw:w-full tw:lg:w-1/2 tw:px-4 tw:mb-4">
             <FormField
               control={form.control}
               name="email"
@@ -155,9 +155,9 @@ export function Contact() {
       data-aos-delay={delay}
     >
       <i className={`${icon} tw:flex-shrink-0`} />
-      <div>
+      <div className="tw:min-w-0">
         <h3>{title}</h3>
-        <p>{content}</p>
+        <p className="tw:break-all">{content}</p>
       </div>
     </div>
   );
@@ -165,7 +165,7 @@ export function Contact() {
   return (
     <section id="contact" className="contact section">
       <div
-        className="tw:container tw:mx-auto sm:tw:px-4 section-title"
+        className="tw:container tw:mx-auto tw:sm:px-4 section-title"
         data-aos="fade-up"
       >
         <h2>Contato</h2>
@@ -175,13 +175,13 @@ export function Contact() {
         </p>
       </div>
       <div
-        className="tw:container tw:mx-auto sm:tw:px-4"
+        className="tw:container tw:mx-auto tw:sm:px-4"
         data-aos="fade-up"
         data-aos-delay={100}
       >
-        <div className="tw:flex tw:flex-wrap gx-lg-0 gy-4">
-          <div className="tw:lg:w-1/3 tw:pr-4 tw:pl-4">
-            <div className="info-container tw:flex tw:flex-col tw:items-center">
+        <div className="tw:flex tw:flex-wrap tw:gap-y-0 tw:gap-x-0">
+          <div className="tw:w-full tw:lg:w-1/3 tw:px-4">
+            <div className="info-container tw:flex tw:flex-col lg:tw:items-center">
               {infoItems.map((item, index) => (
                 <InfoItem
                   key={item.title}
@@ -193,7 +193,7 @@ export function Contact() {
               ))}
             </div>
           </div>
-          <div className="tw:lg:w-2/3 tw:pr-4 tw:pl-4">
+          <div className="tw:w-full tw:lg:w-2/3 tw:px-4">
             <ContactForm />
           </div>
         </div>
