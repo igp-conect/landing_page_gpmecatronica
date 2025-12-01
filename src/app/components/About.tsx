@@ -79,11 +79,7 @@ export const About = () => {
                     openGlightboxVideo(e, GalleryName.PresentationVideo)
                   }
                   className="pulsating-play-btn"
-                >
-                  <span className="sr-only">
-                    Assistir vídeo de apresentação
-                  </span>
-                </button>
+                />
               </div>
             </div>
           </div>
