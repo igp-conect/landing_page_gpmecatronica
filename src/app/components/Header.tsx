@@ -22,7 +22,7 @@
 
 import Image from "next/image";
 import logoImage from "@assets/img/logo.png";
-import simplelogoImage from "@assets/img/simplelogo.png";
+import simplelogoImage from "../icon.png";
 import { CONFIG } from "../configuration";
 
 const NavItem = ({
@@ -88,7 +88,7 @@ export const PageHeader = () => (
     {/* End Top Bar */}
     <div className="branding d-flex align-items-center">
       <div className="container position-relative d-flex align-items-center justify-content-between">
-        <div className="tw:bg-emerald-200 tw:p-1 tw:rounded-md">
+        <div className="tw:bg-emerald-200 tw:p-0.5 tw:rounded-md">
           <Image
             src={logoImage}
             alt="Logo do GPMecatrônica"
