@@ -16,6 +16,7 @@ import { Contact } from "./components/Contact";
 import { CallToAction } from "./components/CallToAction";
 import { Portfolio } from "./components/Portfolio/Portfolio";
 import { Team } from "./components/Team";
+import { ResearchTeams } from "./components/ResearchTeams";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
         <About />
         <Portfolio />
         <Team />
+        <ResearchTeams />
         <CallToAction />
         <Services />
         <FAQ />
