@@ -1,6 +1,7 @@
 import avatarAnderson from "@assets/img/team/anderson.jpg";
 import avatarCamila from "@assets/img/team/camila.png";
 import avatarFernando from "@assets/img/team/camila.png";
+import avatarSabrina from "@assets/img/team/camila.png";
 import avatarDani from "@assets/img/team/dani.jpeg";
 import avatarLeandro from "@assets/img/team/leandro.jpg";
 import Image, { type StaticImageData } from "next/image";
@@ -113,7 +114,7 @@ export function Team() {
     },
     {
       name: "Sabrina Feliciano",
-      image: avatarCamila,
+      image: avatarSabrina,
       socialLinks: {
         lattes: "3201836367296620",
       },
